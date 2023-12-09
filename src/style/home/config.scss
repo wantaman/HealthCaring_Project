@@ -1,0 +1,49 @@
+$blue :#0EC2FB;
+$black-gray :#3D4461;
+$old-orange: #FF5851;
+
+@mixin button_clr_sky{
+    background-color: #0EC2FB;
+    color: #fff;
+    font-weight:700;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all .3s ease-in !important;
+}
+@mixin button_clr_white{
+    background-color: #fff;
+    color: #3D4461;
+    font-weight:700;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: 0.5px solid #0EC2FB;
+    transition: all .3s ease-in !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@mixin facebook {
+    transition: .3s ease-in-out !important;
+    color: #4267B2;
+}
+@mixin twiiter{
+    transition: .3s ease-in-out !important;
+    color: #1DA1F2;
+}
+@mixin youtube{
+    transition: .3s ease-in-out !important;
+    color: #FF0000;
+}
+@mixin lindedn{
+    transition: .3s ease-in-out !important;
+    color: #0a66c2;
+}
+
+
+a{
+    text-decoration: none;
+    color: #3D4461;
+}img{
+    object-fit: cover;
+}

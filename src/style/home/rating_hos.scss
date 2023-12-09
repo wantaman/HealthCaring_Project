@@ -1,0 +1,213 @@
+@import "config";
+$blue : #0EC2FB;
+
+
+.rating-contain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+
+    
+    .box-left{
+        width: 25%;
+        height: 610px;
+        background: #DAF6FE;
+        text-align: center;
+        padding: 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .left-img{
+            height: 40%; 
+            width: 100%;  
+            img{
+                width: 150px;
+                height: 50%;
+                object-fit: contain;
+            }
+            h2{
+                font-size: 45px;
+                font-weight: bold;
+                span{
+                    color: #FF5851;
+                }
+            }
+        }
+        .left-des{
+
+            .btn{
+                @include button_clr_white;
+                margin: 20px 0;
+                padding: 1rem 5rem;
+            }
+            .btn:hover{
+                background: #0EC2FB;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .box-right{
+        width: 74%;
+        height: 100%;
+        
+        .carousel-container{
+            padding: 5rem 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        .custom-arrow {
+            position: absolute;
+            top:0;
+            background-color: #fff; 
+            border: 1px solid #ccc; 
+            padding: 5px; 
+            cursor: pointer;
+            
+        }
+          
+        .left-arrow {
+            left: 10px; 
+            padding: 0.2rem 1rem; 
+            border-radius: 50%;
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.388);
+            @media screen and (max-width:768px){
+                font-size: 25px;
+                padding: 0.2rem 0.6rem;
+                
+            }
+           
+        }
+          
+        .right-arrow {
+            left: 5%; 
+            padding: 0.2rem 1rem; 
+            border-radius: 50%;
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.388);
+            @media screen and (max-width:1400px){
+                left: 8%;
+            }
+            @media screen and (max-width:768px){
+                left: 14%;
+                font-size: 25px;
+                padding: 0.2rem 0.6rem;
+                
+            }
+        }
+        .left-arrow:hover ,.right-arrow:hover{
+            border: 1px solid $blue;
+            color: #0EC2FB;
+            transition: all .3s ease-in-out;
+        }
+        
+        .view-hospital{
+            width: 100%; /* Use percentage for responsiveness */
+            max-width: 450px; /* Set a maximum width for larger screens */
+            height: auto;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.107);
+            border-radius: 10px;
+            gap: 1rem;
+            transition: all 0.4s ease-in !important;
+            overflow: hidden;
+            margin: 0 auto; /* Center the container */
+
+            .view-img{
+                height: 60%;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all .2s ease-in !important;
+                    }
+                    .icon{
+                        position: absolute;
+                        left: 0;
+                        padding: 0.5rem 1.2rem;
+                        background: #FF5851;
+                        color: #fff;
+                    }
+            }
+            .view-detail{
+                width: 100%;
+                height: 40%;
+                .detail-name{
+                    color: $blue;
+                }
+                .title{
+                    font-size: 1.5rem;
+                }
+                .detail-made,.star{
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.388);
+                }
+                .embed{
+                    margin: 0 0px 0 5px;
+                    font-weight: bold;
+                }
+                .btn{
+                    @include button_clr_sky;
+                    padding: 1rem ;
+                    margin: 1rem 0;
+                    width: 100%;
+                    a{
+                        color: #fff;
+                    }
+                }
+                .btn:hover{
+                    transform: translate(0px, -5px);
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.388);
+                }
+                
+            }
+        }
+
+
+
+        .view-hospital:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transition: all .4s ease-in !important;
+            img{
+                filter: brightness(90%);
+            }
+        }
+    }
+    @media screen and (max-width:1256px) {
+        flex-direction: column;
+        gap: 20px;
+        .box-left,.box-right{
+            width: 100%;
+           
+        }
+        // .box-right{background: #fff;}
+        
+    }
+    @media screen and (max-width:992px) {
+        flex-direction: column;
+        gap: 20px;
+        .box-left,.box-right{
+            width: 100%;
+           
+        }
+        // .box-right{background: #fff;}
+        
+    }
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        gap: 20px;
+        .box-left,.box-right{
+            width: 100%;
+           
+        }
+        // .box-right{background: #fff;}
+        
+    }
+}

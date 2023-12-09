@@ -1,0 +1,216 @@
+a {
+  text-decoration: none;
+  color: #3D4461;
+}
+
+img {
+  object-fit: cover;
+}
+
+.rating-contain {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.rating-contain .box-left {
+  width: 25%;
+  height: 610px;
+  background: #DAF6FE;
+  text-align: center;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rating-contain .box-left .left-img {
+  height: 40%;
+  width: 100%;
+}
+.rating-contain .box-left .left-img img {
+  width: 150px;
+  height: 50%;
+  object-fit: contain;
+}
+.rating-contain .box-left .left-img h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.rating-contain .box-left .left-img h2 span {
+  color: #FF5851;
+}
+.rating-contain .box-left .left-des .btn {
+  background-color: #fff;
+  color: #3D4461;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 0.5px solid #0EC2FB;
+  transition: all 0.3s ease-in !important;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 20px 0;
+  padding: 1rem 5rem;
+}
+.rating-contain .box-left .left-des .btn:hover {
+  background: #0EC2FB;
+}
+.rating-contain .box-left .left-des .btn:hover a {
+  color: #fff;
+}
+.rating-contain .box-right {
+  width: 74%;
+  height: 100%;
+}
+.rating-contain .box-right .carousel-container {
+  padding: 5rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.rating-contain .box-right .custom-arrow {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+.rating-contain .box-right .left-arrow {
+  left: 10px;
+  padding: 0.2rem 1rem;
+  border-radius: 50%;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.388);
+}
+@media screen and (max-width: 768px) {
+  .rating-contain .box-right .left-arrow {
+    font-size: 25px;
+    padding: 0.2rem 0.6rem;
+  }
+}
+.rating-contain .box-right .right-arrow {
+  left: 5%;
+  padding: 0.2rem 1rem;
+  border-radius: 50%;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.388);
+}
+@media screen and (max-width: 1400px) {
+  .rating-contain .box-right .right-arrow {
+    left: 8%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rating-contain .box-right .right-arrow {
+    left: 14%;
+    font-size: 25px;
+    padding: 0.2rem 0.6rem;
+  }
+}
+.rating-contain .box-right .left-arrow:hover, .rating-contain .box-right .right-arrow:hover {
+  border: 1px solid #0EC2FB;
+  color: #0EC2FB;
+  transition: all 0.3s ease-in-out;
+}
+.rating-contain .box-right .view-hospital {
+  width: 100%; /* Use percentage for responsiveness */
+  max-width: 450px; /* Set a maximum width for larger screens */
+  height: auto;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.107);
+  border-radius: 10px;
+  gap: 1rem;
+  transition: all 0.4s ease-in !important;
+  overflow: hidden;
+  margin: 0 auto; /* Center the container */
+}
+.rating-contain .box-right .view-hospital .view-img {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.rating-contain .box-right .view-hospital .view-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease-in !important;
+}
+.rating-contain .box-right .view-hospital .view-img .icon {
+  position: absolute;
+  left: 0;
+  padding: 0.5rem 1.2rem;
+  background: #FF5851;
+  color: #fff;
+}
+.rating-contain .box-right .view-hospital .view-detail {
+  width: 100%;
+  height: 40%;
+}
+.rating-contain .box-right .view-hospital .view-detail .detail-name {
+  color: #0EC2FB;
+}
+.rating-contain .box-right .view-hospital .view-detail .title {
+  font-size: 1.5rem;
+}
+.rating-contain .box-right .view-hospital .view-detail .detail-made, .rating-contain .box-right .view-hospital .view-detail .star {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.388);
+}
+.rating-contain .box-right .view-hospital .view-detail .embed {
+  margin: 0 0px 0 5px;
+  font-weight: bold;
+}
+.rating-contain .box-right .view-hospital .view-detail .btn {
+  background-color: #0EC2FB;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.3s ease-in !important;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+.rating-contain .box-right .view-hospital .view-detail .btn a {
+  color: #fff;
+}
+.rating-contain .box-right .view-hospital .view-detail .btn:hover {
+  transform: translate(0px, -5px);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.388);
+}
+.rating-contain .box-right .view-hospital:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: all 0.4s ease-in !important;
+}
+.rating-contain .box-right .view-hospital:hover img {
+  filter: brightness(90%);
+}
+@media screen and (max-width: 1256px) {
+  .rating-contain {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rating-contain .box-left, .rating-contain .box-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .rating-contain {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rating-contain .box-left, .rating-contain .box-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rating-contain {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rating-contain .box-left, .rating-contain .box-right {
+    width: 100%;
+  }
+}

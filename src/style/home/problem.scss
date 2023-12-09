@@ -1,0 +1,136 @@
+@import "config";
+
+.issue_patient{
+    background: #DAF6FE;
+    height: auto ;
+    width: 100%;
+    .center-issue{
+        padding: 30px 0;
+        width: 70%;
+        margin: 0 auto;
+
+         @media screen and (max-width:768px){
+            width: 90%;
+            // border: 1px solid black ;
+        }
+    }
+    .cen-img{
+        width:100%;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+            filter: grayscale(0.4);
+        }
+    }
+    .cen-detial{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        
+        .dt-start{
+            width: 100%;
+            .detail-title{
+                font-size: 50px;
+                font-weight: bold;
+                line-height: 55px;
+                span{
+                    color: #FF5851;
+                }
+            }
+            .detail-des{
+                width: 50%;
+                font-size: 1.1rem;
+            }
+        }
+        .dt-end{
+            width: auto;
+            height: auto;
+            text-align: center;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        @media screen and (max-width:768px){
+            flex-direction: column;
+            align-items: start;
+            .dt-start{
+                .detail-des{
+                    width: 100%;
+                }
+            }
+            .dt-end{
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.article{
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    .art-des{
+        width: 40%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom:50px;
+        
+        .status{
+            font-size: 1.1rem;
+            
+        }
+        .title{
+            font-size:55px;
+            font-weight: bold;
+            span{
+                color: #FF5851;
+            }
+        }
+        
+        
+    }
+    .art_contain{
+        width: 70%;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .card-article:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            cursor: pointer;
+        }
+        .con-fav{
+            text-align: right;
+            .fav{
+                margin: 0 10px;
+            }
+        }
+
+    }
+    @media screen  and (max-width:1560px){
+        .art-des,.art_contain{
+            .card-article{
+                margin: 0 auto;
+            }
+        }
+    }
+    @media screen  and (max-width:1256px){
+        .art-des,.art_contain{
+            width: 90%;
+            margin: 0 auto;
+            .card-article{
+                margin: 0 auto;
+            }
+        }
+    }
+    @media screen  and (max-width:768px){
+        .art-des,.art_contain{
+            width: 90%;
+        }
+    }
+}
