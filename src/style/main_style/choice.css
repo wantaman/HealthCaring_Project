@@ -1,0 +1,44 @@
+.sec-choice {
+  width: 100%;
+  height: auto;
+  font-size: 17px;
+}
+.sec-choice .cho-title {
+  width: 100%;
+  padding: 15px 0;
+  max-width: 90%;
+}
+.sec-choice .cho-title .title {
+  font-size: 45px;
+  font-weight: bold;
+}
+.sec-choice .cho-title .title span {
+  font-size: 45px;
+  color: #FF5851;
+}
+.sec-choice .cho-des {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.sec-choice .cho-des .des-box {
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 1rem 0;
+}
+.sec-choice .cho-des .des-box .name-img {
+  opacity: 0.8;
+}
+.sec-choice .cho-des .des-box .point-img {
+  font-weight: bold;
+}
+.sec-choice .cho-des .des-box .des-img li {
+  list-style: disc;
+}
+@media screen and (max-width: 728px) {
+  .sec-choice {
+    text-align: center;
+  }
+}

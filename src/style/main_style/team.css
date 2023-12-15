@@ -1,0 +1,80 @@
+.team {
+  text-align: center;
+  font-size: 18px;
+}
+.team .con-top {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.team .con-top .point {
+  opacity: 0.7;
+}
+.team .con-top .title {
+  font-weight: bold;
+  font-size: 45px;
+}
+.team .con-top .title span {
+  color: #FF5851;
+}
+.team .con-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+.team .con-bottom .bottom-box {
+  width: 100%;
+  height: 450px;
+  max-width: 350px;
+  margin-top: 20px;
+  transition: all 0.4s ease-in !important;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.team .con-bottom .bottom-box .profile {
+  height: 70%;
+}
+.team .con-bottom .bottom-box .profile img {
+  width: 100%;
+  height: 100%;
+}
+.team .con-bottom .bottom-box .info {
+  height: 30%;
+  padding: 1.5rem 2.4rem;
+  text-align: start;
+}
+.team .con-bottom .bottom-box .info .position {
+  color: #55acee;
+  font-size: 14px;
+}
+.team .con-bottom .bottom-box .info .name {
+  font-size: 20px;
+}
+.team .con-bottom .bottom-box .info .contact-team {
+  width: auto;
+  display: inline-flex;
+  gap: 5px;
+}
+.team .con-bottom .bottom-box .info .contact-team a {
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.042);
+}
+.team .con-bottom .bottom-box .info .contact-team a .icon {
+  font-size: larger;
+}
+.team .con-bottom .bottom-box .info .contact-team a:hover {
+  border: 1px solid #55acee;
+}
+.team .con-bottom .bottom-box:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .team .con-bottom .bottom-box {
+    border: 1px solid rgba(0, 0, 0, 0.094);
+  }
+}

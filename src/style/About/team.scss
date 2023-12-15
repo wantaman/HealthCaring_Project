@@ -1,0 +1,88 @@
+$pink: #ff8dc2;
+$blue_thin: #55acee;
+$purple_thin: #3d4461;
+$hover_outsite_border: #eeeeee;
+$orange :#FF5851;
+
+
+.team{
+    text-align: center;
+    font-size: 18px;
+    .con-top{
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        .point{
+            opacity: 0.7;
+        }
+        .title{
+            font-weight: bold;
+            font-size: 45px;
+            span{
+                color: $orange;
+            }
+        }
+    }
+    .con-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        width: 100%;
+        .bottom-box{
+            width: 100%;
+            height: 450px;
+            max-width: 350px;
+            margin-top: 20px;
+            transition: all .4s ease-in !important;
+            overflow: hidden;
+            border-radius: 5px;
+            
+            .profile{
+                height: 70%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+            }.info{
+                height: 30%;
+                padding: 1.5rem 2.4rem;
+                text-align: start;
+                .position{
+                    color: #55acee;
+                    font-size: 14px;
+                }
+                .name{
+                    font-size:20px;
+                }
+                .contact-team{
+                    width: auto;
+                    display: inline-flex;
+                    gap: 5px;
+                    a{
+                        padding: 5px 10px;
+                        border-radius: 50%;
+                        transition: all .2s ease-in-out;
+                        border: 1px solid rgba(0, 0, 0, 0.042);
+                        .icon{
+                            font-size: larger;
+                        }
+                        &:hover{
+                            border: 1px solid $blue_thin;
+                        }
+                        
+                    }
+                }
+            }
+            &:hover{
+                
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                cursor: pointer;
+            }
+            @media screen and (max-width:992px){
+               border: 1px solid rgba(0, 0, 0, 0.094); 
+            }
+        }
+    }
+}

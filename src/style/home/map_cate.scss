@@ -20,6 +20,34 @@
             }
             .points-cate{
                 line-height: 20px;
+                transition: all .4s ease-in !important;
+                position: relative;
+                overflow: hidden;
+                // border: 1px solid black;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -10%;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background:#FF5851;
+                    transform: translate(50%,50%);
+                    // transform: .1s ;
+                }
+                &:hover{
+                    
+                    cursor: pointer;
+                    transition: .5s ease-in-out ;
+                    transform: translateX(10px);
+                    padding-left: 25px;
+                    &::before{
+                        left: 0;
+                        transition: .5s ease-in-out;
+                    }
+                }
+                // border: 1px solid black;
             }
             .view-more{
                 font-weight: bold;

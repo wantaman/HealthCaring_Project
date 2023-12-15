@@ -32,7 +32,7 @@ const Problem = () => {
             </div>
             <div className="dt-end">
               <img src={qr} alt="" />
-              <span>Contact Us</span>
+              {/* <span>Contact Us</span> */}
             </div>
           </div>
         </div>

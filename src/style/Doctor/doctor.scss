@@ -1,15 +1,17 @@
 @import "../home/config";
 
+$blue :#0EC2FB;
+$purple_thin: #3d4461;
 $pink: #ff8dc2;
 $blue_thin: #55acee;
-$purple_thin: #3d4461;
 $hover_outsite_border: #eeeeee;
+$old-orange: #FF5851;
 
-.about {
-    .header {
+.doctor{
+    .header{
         height: auto;
     }
-    main {
+    main{
         margin-top: 20px;
         .search {
             width: 100%;
@@ -91,7 +93,7 @@ $hover_outsite_border: #eeeeee;
             }
         }
 
-        .about-con{
+        .doctor-con{
             width: 75%;
             height: auto;
             margin: 0 auto;
@@ -107,84 +109,98 @@ $hover_outsite_border: #eeeeee;
                     }
                 }
             }
-            .choice{
-                padding:0 1.5rem;
-            }
-            .team{
-                padding: 0 0.8rem;
-                margin-top:5rem;
-            }
-        }
-
-        .feedback{
-            margin-top: 5rem;
-            background: #E8F6FF;
-            
-            
-            .con-feedback{
-                width: 75%;
-                margin: 0 auto;
-                text-align: center;
-                .heart-beat{
-                    width:max-content;
-                    margin: 0 auto;
-                    padding: 0.5rem;
-                    animation: draw 4s infinite linear;
-                    border-radius: 50%;
-                    border: none;
-                    margin-top: -30px;
-                    
-                    span{
-                        .size{
-                            font-size: 65px;
-                        }
+            .con-profile{
+                border: 1px solid rgba(0, 0, 0, 0.161);
+                padding: 1rem 1.5rem;
+                height: max-content;
+                border-radius: 0.6rem;
+                display: flex;
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+                gap: 18px;
+                margin-bottom: 2rem;                
+                .profile-img{
+                    width: 25%;
+                    height:320px;
+                    min-height: 310px;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 0.4rem;
+                    } 
+                    .icon{
+                        position: absolute;
+                        top: 0;
+                        left: 0%;
+                        width: 30px;
+                        background-color: $old-orange;
+                        color: #000;
+                        text-align: center;
                     }
                 }
-                .user{
-                    height:auto;
-                    max-width: 700px;
-                    margin: 0 auto;
-                    padding: 3rem 0;
+                .profile-detail{
+                    width: 70%;
+                    height: max-content;
+                    font-size: 18px;
+                    .department{
+                        color: $blue;
+                        
+
+                    }
                     .title{
-                        font-size: 45px;
+                        font-size: 40px;
                         font-weight: bold;
-                        span{
-                            color: #FF5851;
-                        }
                     }
-                    .pro-user{
-                        padding: 2.5rem 0;
-                        span{
-                            margin-inline: 10px;
-                            padding: 1.5rem 0.5rem;
-                            border-radius: 50%;
-                            @media screen and (max-width:435px){
-                                padding: 1.5rem 0;
-                            }
-                            
-                            img{
-                                width: 70px;
-                                border-radius: 50%;
-                            }
-                        }
-                        .border:nth-child(2) img{
-                            transform: translate(0,40px);
-                            filter: drop-shadow(3px 10px 10px rgba(0, 0, 0, 0.333));
-
-                        }
+                    .position,.email .a,.tel,.exp{
+                        color: #00000098;   
+                        
+                    }.des{
+                        margin-top: 1.5rem;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2; /* Limit to 3 lines */
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                     }
-                    .des{
-                        font-size: 18px;
-                        padding: 20px 0;
-                    }.role{
-                        font-weight: 600;
-                        opacity: 0.7;
-                    }.name{
-                        font-weight: bold;
-                        font-size: 25px;
+                    .btn{
+                        width: max-content;
+                        padding: 0;
+                        .button{
+                            padding: 0.8rem 1.5rem;
+                            margin-inline:0.5rem;
+                            border-radius: 0.4rem;
+                            @include button_clr_white;
+                            &:hover{
+                                background: $blue;
+                                color: #fff;
+                            }
+                        }
                     }
                 }
-            }   
+
+
+                @media screen and (max-width:728px){
+                    flex-direction: column;
+                    align-items: center;
+                    width: 90%;
+                    margin: 0 auto;
+                    .profile-img,.profile-detail{
+                        width: 100%;
+                        font-size: 15px;
+                        .btn{
+                            width: 100%;
+                            margin: 0 auto;
+                            display: inline-block;
+                            .button{
+                                margin: 0.2rem ;
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
     .concluding{
@@ -194,37 +210,4 @@ $hover_outsite_border: #eeeeee;
         background:#3D4461;
         color: #fff;
     }
-}
-
-@keyframes draw {
-    0% {
-        transform: scale(1.2);
-        box-shadow: #f7eceb1f 0px 0px 0px 3px, #fbafac4b 0px 0px 0px 6px, #ff757198 0px 0px 0px 9px, #ff5751d1 0px 0px 0px 12px,#FF5851 0px 0px 0px 15px;
-        opacity: 1;
-      }
-    
-      10% {
-        transform: scale(1.2);
-        opacity: 0.8;
-      }
-    
-      50% {
-        transform: scale(1.3);
-        opacity: 0.9;
-      }
-    
-      60% {
-        transform: scale(1.25);
-        opacity: 0.7;
-      }
-    
-      75% {
-        transform: scale(1.3);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1.1);
-        opacity: 1;
-      }
-    
 }

@@ -16,6 +16,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 const CustomRightArrow = ({ onClick, ...rest }) => {
     return <button onClick={onClick} className="custom-arrow right-arrow"><FontAwesomeIcon className='icon' icon={faArrowRight}/></button>;
 };
+
 const Rating_hos = () => {
     // carousel
     const responsive = {

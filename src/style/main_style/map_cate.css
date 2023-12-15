@@ -22,6 +22,30 @@
 }
 .cate .cen-cate .cate-detail .points-cate {
   line-height: 20px;
+  transition: all 0.4s ease-in !important;
+  position: relative;
+  overflow: hidden;
+}
+.cate .cen-cate .cate-detail .points-cate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FF5851;
+  transform: translate(50%, 50%);
+}
+.cate .cen-cate .cate-detail .points-cate:hover {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  transform: translateX(10px);
+  padding-left: 25px;
+}
+.cate .cen-cate .cate-detail .points-cate:hover::before {
+  left: 0;
+  transition: 0.5s ease-in-out;
 }
 .cate .cen-cate .cate-detail .view-more {
   font-weight: bold;

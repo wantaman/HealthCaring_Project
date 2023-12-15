@@ -59,6 +59,9 @@ main {
           .search-input {
             width: 49%;
             margin: 0 10px;
+            @media screen and (max-width: 992px) {
+                margin: 0;
+            }
                 
             }
             .btn-border {
@@ -92,7 +95,9 @@ main {
         width: 75%;
         height: auto;
         margin: 0 auto;
-        
+        @media screen and (max-width:728px){
+            width: 100%;
+        }
         .head-navigate{
             margin-top: 10px;
             ul{

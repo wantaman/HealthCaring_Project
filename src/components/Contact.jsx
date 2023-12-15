@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./sub_components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarChart, faMap, faPerson, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -7,9 +7,15 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css"
 import Map_cate from "./sub_components/Map_cate";
 import Footer from "./sub_components/Footer";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 
 
 const Contact = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <div className="contact">
       {/* Header */}
@@ -62,7 +68,8 @@ const Contact = () => {
 
           <div className="con1">
             <div className="con1-center">
-              <div className="center-left">
+              <div className="center-left"
+              data-aos="zoom-in-up">
                 <p className="title-left">
                   Alway Get In To Touch<br/> <span>Our Contact Detail</span>
                 </p>
@@ -76,7 +83,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="center-right">
+              <div className="center-right"
+              data-aos="zoom-in-up">
                 <form action="">
                   <label for="" className="title"><h4>Say "Hello" To Us</h4></label>
                   <div className="form-input">

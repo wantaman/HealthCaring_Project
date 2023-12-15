@@ -85,6 +85,7 @@ img {
   .rating-contain .box-right .left-arrow {
     font-size: 25px;
     padding: 0.2rem 0.6rem;
+    display: none;
   }
 }
 .rating-contain .box-right .right-arrow {
@@ -104,6 +105,7 @@ img {
     left: 14%;
     font-size: 25px;
     padding: 0.2rem 0.6rem;
+    display: none;
   }
 }
 .rating-contain .box-right .left-arrow:hover, .rating-contain .box-right .right-arrow:hover {

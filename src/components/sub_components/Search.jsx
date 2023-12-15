@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../../style/home/search.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "bootstrap/dist/css/bootstrap.css";
 import { faArrowCircleRight, faBarChart } from '@fortawesome/free-solid-svg-icons';
 import contact from '../../assets/image/contact.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Search = () => {
+
+    useEffect(()=>{
+        AOS.init(); 
+    },[])
+
   return (
     <section>
-        <div className="search">
+        <div className="search"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+        >
             <div className="sch-box">
                 <div className="box-top">
                     <span>Start your search </span>
