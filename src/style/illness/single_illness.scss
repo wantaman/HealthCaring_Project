@@ -1,0 +1,150 @@
+@import "../home/config";
+
+$pink: #ff8dc2;
+$blue_thin: #55acee;
+$purple_thin: #3d4461;
+$hover_outsite_border: #eeeeee;
+
+.single_illness{
+    width: 100%;
+    main{
+        .illness_con{
+            width: 75%;
+            height: auto;
+            margin: 0 auto;
+            @media screen and (max-width:728px){
+                width: 100%;
+            }
+            .head-navigate{
+                margin-top: 10px;
+                ul{
+                    display: flex;
+                    a{
+                        padding: 0;
+                    }
+                }
+            }
+            .illness_info{
+                padding-left: 2rem;
+                margin-top: 43px;
+                width: 80%;
+                .title{
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+                small{
+                    color: $blue_thin;
+                }
+                .view{
+                    color: #3d4461b7;
+                    margin-bottom: 30px;
+                    span{
+                       margin-right: 20px;
+                        padding: 0;
+                    }
+                }
+                .static_illness{
+                    font-size: 20px;
+                }
+                .des{
+                    height: auto;
+                    .line{
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                    }
+                    .line::first-letter{
+                        padding-left: 20px;
+                    }
+                }
+                @media screen and (max-width:728px) {
+                    width: 90%;
+                }
+                
+            }
+            .relate_hos{
+                padding-left: 2rem;
+                font-size: 30px;
+                width: 80%;
+                font-weight: 500;
+                @media screen and (max-width:728px) {
+                    width: 90%;
+                }
+                .title{
+                    overflow: hidden;
+                    @media screen and (max-width:728px){
+                        font-weight: bold;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3; /* Show 2 lines */
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .con_hos{
+                    width: 100%;
+                    display: flex;
+                    gap: 1rem;
+                    
+                    .box{
+                        width: 30%;
+                        height:550px;
+                        overflow: hidden;
+                        border-radius: 0.5rem;
+                        transition:all .3s ease-in !important;
+                        border: 1px solid rgba(0, 0, 0, 0.097);
+                        &:hover{
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        }
+                        .pic{
+                            height: 260px;
+                            width: 100%;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        .detail{
+                            padding: 1rem;
+                            font-size: 18px;
+                            line-height: 20px;
+                            .title{
+                                font-size: 25px;
+                                padding: 15px 0;
+                                font-weight: bold;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2; /* Show 2 lines */
+                                -webkit-box-orient: vertical;
+                                text-overflow: ellipsis;
+                            }
+                            p{
+                                color: #3d4461ee;
+                                span{
+                                    color: $blue_thin;
+                                }
+                                &:last-child span a:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                            
+                        }
+                    }
+                    @media screen and (max-width:728px){
+                        flex-direction: column;
+                        width: 100%;
+                        .box{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .concluding{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        background:#3D4461;
+        color: #fff;
+    }
+}

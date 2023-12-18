@@ -1,21 +1,56 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./sub_components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarChart, faMap, faPerson, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../style/Contact/contact.scss"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css"
 import Map_cate from "./sub_components/Map_cate";
 import Footer from "./sub_components/Footer";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import axios from "axios";
 
 
 
 const Contact = () => {
+  const [query, setquery] = useState("");
+  const [result, setresult] = useState([]);
+  const [showmessage, setShowMessage] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSearch = async () => {
+    try {
+      if (!query.trim()) {
+        setresult([]);
+        setShowMessage(false);
+        return;
+      }
+      const res = await axios.get("http://localhost:5000/illness");
+      const filterSearch = res.data.filter((con) =>
+        con.name.toLowerCase().includes(query.toLowerCase())
+      ); // make all capital letter to lower
+
+      setresult(filterSearch);
+      setShowMessage(filterSearch.length === 0);
+    } catch (e) {
+      console.error("Failed Connection", e);
+    }
+  };
+
+  // when user clicks on button
+  const handleButtonClick = () => {
+    handleSearch();
+  };
+
+  // handle on link click
+  const handleItemClick = (id) => {
+    navigate(`/Single_illness/${id}`);
+  };
   useEffect(()=>{
+    handleSearch();
     Aos.init();
-  },[])
+  },[query])
   return (
     <div className="contact">
       {/* Header */}
@@ -34,7 +69,32 @@ const Contact = () => {
                   type="text"
                   className="form-control p-3"
                   placeholder="Search.."
+                  value={query}
+                  onChange={(e) => setquery(e.target.value)}
                 />
+                 {
+                  query.trim() && (
+                  <div className="dropdown_search ">
+                    {showmessage ? (
+                        <p className=" p-2 ">Can not found!</p>
+                      ) : (
+                        <ul className="search_list">
+                          {result.map((Item) => (
+                            <li
+                              key={Item.id}
+                              onClick={() => handleItemClick(Item.id)}
+                              className="list"
+                            >
+                              <Link to={`/Single_illness/${Item.id}`}>
+                                {Item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                  </div>
+                  )
+                }
               </div>
               <div className="search-input">
                 <select
@@ -47,7 +107,7 @@ const Contact = () => {
                   <option value="3">Jurie</option>
                 </select>
               </div>
-              <button type="submit" className="btn p-3 btn-border  text-light">
+              <button type="submit" className="btn p-3 btn-border  text-light" onClick={handleButtonClick}>
                 Search
               </button>
             </div>

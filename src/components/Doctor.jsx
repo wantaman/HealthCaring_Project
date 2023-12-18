@@ -3,7 +3,7 @@ import "../style/Doctor/doctor.scss";
 import Header from "./sub_components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarChart, faPersonRifle } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
@@ -21,14 +21,59 @@ const Doctor = () => {
   const [data, setdata] = useState([]);
   const [value, setValue] = useState(randomstars());
   const [hover, setHover] = useState(-1);
+  const [currentPage , setcurrentPage] = useState(1);
+  const [perPage,setperPage] = useState(5);
+  const [select , setSelect] =useState(null);
+  const [query, setquery] = useState("");
+  const [result, setresult] = useState([]);
+  const [showmessage, setShowMessage] = useState(false);
+  const navigate = useNavigate();
+
+  const lastPostIndex = currentPage * perPage;
+  const firstPost = lastPostIndex - perPage;
+  const currenPost = data.slice(firstPost,lastPostIndex);
+  let page = [];
 
   
 
-  useEffect(() => {
-    
+  const handleSearch = async () => {
+    try {
+      if (!query.trim()) {
+        setresult([]);
+        setShowMessage(false);
+        return;
+      }
+      const res = await axios.get("http://localhost:5000/illness");
+      const filterSearch = res.data.filter((con) =>
+        con.name.toLowerCase().includes(query.toLowerCase())
+      ); // make all capital letter to lower
+
+      setresult(filterSearch);
+      setShowMessage(filterSearch.length === 0);
+    } catch (e) {
+      console.error("Failed Connection", e);
+    }
+  };
+
+  // when user clicks on button
+  const handleButtonClick = () => {
+    handleSearch();
+  };
+
+  // handle on link click
+  const handleItemClick = (id) => {
+    navigate(`/Single_illness/${id}`);
+  };
+
+
+  for (let i = 1 ;i <= Math.ceil(data.length/perPage);i++){
+    page.push(i)
+  }
+
+  useEffect(() => {  
     const fetch = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/hospital");
+        const res = await axios.get("http://localhost:5000/hospital");
         setdata(res.data);
       } catch (e) {
         console.error(e);
@@ -36,7 +81,13 @@ const Doctor = () => {
     };
     fetch();
     setValue(randomstars());
-  }, []);
+    handleSearch();
+  }, [query]);
+  
+  const handleClick = (index) =>{
+    setcurrentPage(index + 1);
+    setSelect(index)
+  }
 
   return (
     <div className="doctor">
@@ -53,7 +104,32 @@ const Doctor = () => {
                   type="text"
                   className="form-control p-3"
                   placeholder="Search.."
+                  value={query}
+                  onChange={(e) => setquery(e.target.value)}
                 />
+                {
+                  query.trim() && (
+                  <div className="dropdown_search ">
+                    {showmessage ? (
+                        <p className=" p-2 ">Can not found!</p>
+                      ) : (
+                        <ul className="search_list">
+                          {result.map((Item) => (
+                            <li
+                              key={Item.id}
+                              onClick={() => handleItemClick(Item.id)}
+                              className="list"
+                            >
+                              <Link to={`/Single_illness/${Item.id}`}>
+                                {Item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                  </div>
+                  )
+                }
               </div>
               <div className="search-input">
                 <select
@@ -66,7 +142,7 @@ const Doctor = () => {
                   <option value="3">Jurie</option>
                 </select>
               </div>
-              <button type="submit" className="btn p-3 btn-border  text-light">
+              <button type="submit" className="btn p-3 btn-border  text-light" onClick={handleButtonClick}>
                 Search
               </button>
             </div>
@@ -91,7 +167,7 @@ const Doctor = () => {
               </li>
             </ul>
           </div>
-          {data.map((index) => (
+          {currenPost.map((index) => (
             <div className="con-profile" key={index.id}>
               <div className="profile-img">
                 <img src={index.hospital_type[0].detail[0].img} alt="" />
@@ -101,7 +177,7 @@ const Doctor = () => {
               </div>
               <div className="profile-detail">
                 <span className="department">
-                  Work in {index.hospital_type[0].lable}
+                  Hospital {index.hospital_type[0].lable}
                 </span>
                 <h3 className="title">{index.hospital_type[0].detail[0].doctor_name}</h3>
                 <span className="position">
@@ -109,8 +185,8 @@ const Doctor = () => {
                 </span>
                 <br />
                 <span className="email">
-                  <a className="a" href="javascript:void(0);">
-                    <b>Email: </b> {index.hospital_type[0].detail[0].email}
+                  <a className="text-primary"  href="javascript:void(0);">
+                    <b style={{color:"#00000098"}}>Email: </b> {index.hospital_type[0].detail[0].email}
                   </a>
                 </span>
                 <br />
@@ -157,14 +233,22 @@ const Doctor = () => {
                 <p className="des">
                   "{index.hospital_type[0].detail[0].des_doc}"
                 </p>
-                '
-                <div className="btn">
+                <div className="btns">
                   <button className="button">Add Feedback</button>
                   <button className="button">Contact Now</button>
                 </div>
+                
               </div>
+              
             </div>
           ))}
+        </div>
+        <div className="pagination ">
+          {
+            page.map((page,index)=>(
+              <button className={`pagination-btn ${select === index ? 'selected' : ''}`} key={index} onClick={() =>handleClick(index)}>{page}</button>
+            ))
+          }
         </div>
         <div className="map_cate ">
           <Map_cate/>

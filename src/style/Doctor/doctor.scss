@@ -16,7 +16,7 @@ $old-orange: #FF5851;
         .search {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            // overflow: hidden;
             background-color: $purple_thin;
             
             .sch-box {
@@ -63,6 +63,30 @@ $old-orange: #FF5851;
                         // border: 1px solid black;
                         @media screen and (max-width: 992px) {
                             margin: 0;
+                        }
+                        .dropdown_search{
+                            position: absolute;
+                            border: 1px solid rgba(0, 0, 0, 0.257);
+                            width: 300px;
+                            height: 150px;
+                            bottom: -100%;
+                            transform: translateY(20%);
+                            left: 10;    
+                            z-index: 10;
+                           
+                            @media screen  and (max-width:728px){
+                                width: 290px;
+                                bottom: 18%;
+                                left: 0;
+                            }
+                            @media screen  and (max-width:992px){
+                                width: 290px;
+                                bottom: 18%;
+                                left: 0;
+                            }
+                            @media screen  and (max-width:428px){
+                                width: 250px;
+                            }
                         }
                     }
                     .btn-border {
@@ -163,7 +187,7 @@ $old-orange: #FF5851;
                         text-overflow: ellipsis;
                         overflow: hidden;
                     }
-                    .btn{
+                    .btns{
                         width: max-content;
                         padding: 0;
                         .button{
@@ -184,7 +208,7 @@ $old-orange: #FF5851;
                     flex-direction: column;
                     align-items: center;
                     width: 90%;
-                    margin: 0 auto;
+                    margin: 10px auto;
                     .profile-img,.profile-detail{
                         width: 100%;
                         font-size: 15px;
@@ -201,6 +225,27 @@ $old-orange: #FF5851;
                 }
             }
 
+        }
+        .pagination{
+            width: 75%;
+            margin: 0 auto;
+            .pagination-btn{
+                padding: 0.5rem  1rem;
+                margin: 0 5px;
+                border-radius: 0.2rem;
+                background: #fff;
+                font-weight: bold;
+                border: 1px solid #3d446123;
+               
+                
+            }
+            .selected{
+                background-color: #3D4461;
+                color: #fff;
+            }
+            @media screen  and (max-width:728px){
+                width: 90%;
+            }
         }
     }
     .concluding{

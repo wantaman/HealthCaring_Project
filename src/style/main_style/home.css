@@ -23,15 +23,31 @@ img {
   height: max-content;
   width: 70%;
   margin: 0 auto;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+@media screen and (max-width: 728px) {
+  .homepage main .filter {
+    width: 90%;
+  }
 }
 .homepage main .intro-doctor {
   width: 100%;
   height: auto;
+  z-index: 0;
+  margin-top: 18vh;
+}
+@media screen and (max-width: 728px) {
+  .homepage main .intro-doctor {
+    margin-top: 20vh;
+  }
 }
 .homepage main .rating {
   margin-top: 57px;
   width: 100%;
-  height: 470px;
+  height: auto;
 }
 .homepage main .problem_pt {
   margin-top: 15vh;
@@ -45,17 +61,17 @@ img {
 }
 @media screen and (max-width: 1256px) {
   .homepage main .problem_pt {
-    margin-top: 100vh;
+    margin-top: 15vh;
   }
 }
 @media screen and (max-width: 992px) {
   .homepage main .problem_pt {
-    margin-top: 100vh;
+    margin-top: 10vh;
   }
 }
 @media screen and (max-width: 768px) {
   .homepage main .problem_pt {
-    margin-top: 90vh;
+    margin-top: 5vh;
   }
 }
 .homepage .concluding {
