@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./sub_components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarChart, faMap, faPerson, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faBarChart, faHandshake, faMap, faPerson, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../style/Contact/contact.scss"
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css"
@@ -10,6 +10,7 @@ import Footer from "./sub_components/Footer";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 
 
@@ -26,7 +27,7 @@ const Contact = () => {
         setShowMessage(false);
         return;
       }
-      const res = await axios.get("http://localhost:5000/illness");
+      const res = await axios.get("https://data-healthcare.onrender.com/illness");
       const filterSearch = res.data.filter((con) =>
         con.name.toLowerCase().includes(query.toLowerCase())
       ); // make all capital letter to lower
@@ -50,7 +51,24 @@ const Contact = () => {
   useEffect(()=>{
     handleSearch();
     Aos.init();
-  },[query])
+  },[query]);
+
+  // email integrate 
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_0e3dtn6', 'template_8mj1tat', form.current, 'tY2sk4qO3-NapmXj7')
+      .then((result) => {
+          console.log(result.text);
+          window.location.reload(true);
+      }, (error) => {
+          console.log(error.text);
+          window.location.reload(false);
+      });
+  };
+  
+
   return (
     <div className="contact">
       {/* Header */}
@@ -145,18 +163,18 @@ const Contact = () => {
 
               <div className="center-right"
               data-aos="zoom-in-up">
-                <form action="">
-                  <label for="" className="title"><h4>Say "Hello" To Us</h4></label>
+                <form ref={form} onSubmit={sendEmail} >
+                  <label for="" className="title"><h4>Say "Hello" To Us {"___"} <FontAwesomeIcon color="#FF5851" icon={faHandshake}/></h4></label>
                   <div className="form-input">
-                    <input type="text" className="form-control" placeholder="Username"/>
+                    <input type="text" className="form-control" placeholder="Username" name="username"/>
                   </div>
                   <div className="form-input">
-                    <input type="email" className="form-control" placeholder="Email"/>
+                    <input type="email" className="form-control" placeholder="Email" name="email"/>
                   </div>
                   <div className="form-input">
-                    <input type="password" min={0} className="form-control" placeholder="Password"/>
+                    <textarea type="text" className="form-control"  placeholder="Message" name="message"/>
                   </div>
-                  <button className="button">
+                  <button className="button" type="submit">
                     Send Now
                   </button>
                 </form>

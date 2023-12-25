@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../style/home/problem.scss";
 import qr from "../../assets/image/qr_1.svg";
 import banner from "../../assets/image/pro_1.webp";
-import illness_1 from "../../assets/image/illness_1.jpeg"
-import { AspectRatio,Card, CardContent, IconButton} from "@mui/joy";
+import { AspectRatio, Card, CardContent, IconButton } from "@mui/joy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faShareAlt, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faCalendar,
+  faShareAlt,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import axios from "axios";
 
 const Problem = () => {
+  const [article, setArticle] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const data = async () => {
+      try {
+        const res = await axios.get(
+          "https://data-healthcare.onrender.com/articles"
+        );
+        setArticle(res.data);
+      } catch (error) {
+        console.log("message:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    data();
+    Aos.init();
+  });
   return (
     <section>
       <div className="issue_patient">
@@ -51,229 +74,51 @@ const Problem = () => {
           </p>
         </div>
         <div className="art_contain">
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
+          {article.map((item, index) => (
+            <Card
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              sx={{ width: 450 }}
+              className="card-article"
+              key={index.id}
+            >
+              <div>
+                <IconButton
+                  aria-label="bookmark Bahamas Islands"
+                  variant="plain"
+                  color="neutral"
+                  size="sm"
+                  sx={{
+                    position: "absolute",
+                    top: "0.875rem",
+                    right: "0.5rem",
+                  }}
+                ></IconButton>
               </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
-              </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
-              </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
-              </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
-              </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card sx={{ width: 450 }} className="card-article">
-            <div>
-              <IconButton
-                aria-label="bookmark Bahamas Islands"
-                variant="plain"
-                color="neutral"
-                size="sm"
-                sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-              >
-              </IconButton>
-            </div>
-            <AspectRatio minHeight="250px" maxHeight="300px">
-              <img
-                src={illness_1}
-                loading="lazy"
-                alt=""
-              />
-            </AspectRatio>
-            <CardContent orientation="vertical" >
-              <div className="con-des">
-                <span className="type_illness">No infection</span>
-                <p className="des">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, iste quae. Laboriosam nostrum,
-                     vero sequi sed neque, quod quia, illo ab aliquam molestiae modi similique minima minus atque optio unde.
-                </p>
-                <span className="date"><FontAwesomeIcon icon={faCalendar}/> 15, November 2022</span>
-              </div>
-              <div className="con-fav">
-                <span className="fav">
-                    <FontAwesomeIcon icon={faThumbsUp}/> 2,453
-                </span>
-                <span className="share">
-                    <FontAwesomeIcon icon={faShareAlt}/> 200
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-
+              <AspectRatio minHeight="250px" maxHeight="300px">
+                <img src={item.ref} loading="lazy" alt="" />
+              </AspectRatio>
+              <CardContent orientation="vertical">
+                <div className="con-des">
+                  <span className="type_illness">
+                    <b>{item.title}</b>
+                  </span>
+                  <p className="des">{item.scripte}</p>
+                </div>
+                <div className="con-fav">
+                  <span className="date float-start">
+                    <FontAwesomeIcon icon={faCalendar} /> {item.date}
+                  </span>
+                  <span className="fav">
+                    <FontAwesomeIcon icon={faThumbsUp} /> {item.like}
+                  </span>
+                  <span className="share">
+                    <FontAwesomeIcon icon={faShareAlt} /> {item.share}
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

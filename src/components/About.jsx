@@ -10,7 +10,7 @@ import user_img from "../assets/image/profile4.jpg";
 import Map_cate from "./sub_components/Map_cate";
 import Footer from "./sub_components/Footer";
 import axios from "axios";
-
+import Aos from "aos";
 const About = () => {
   const [query, setquery] = useState("");
   const [result, setresult] = useState([]);
@@ -24,7 +24,7 @@ const About = () => {
         setShowMessage(false);
         return;
       }
-      const res = await axios.get("http://localhost:5000/illness");
+      const res = await axios.get("https://data-healthcare.onrender.com/illness");
       const filterSearch = res.data.filter((con) =>
         con.name.toLowerCase().includes(query.toLowerCase())
       ); // make all capital letter to lower
@@ -49,6 +49,9 @@ const About = () => {
   useEffect(() => {
     handleSearch();
   }, [query]);
+  useEffect(()=>{
+    Aos.init();
+  })
   return (
     <div className="about">
       {/* Header */}

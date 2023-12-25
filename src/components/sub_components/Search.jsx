@@ -11,7 +11,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Item from "antd/es/list/Item";
 
 const Search = () => {
   const [query, setquery] = useState("");
@@ -19,36 +18,30 @@ const Search = () => {
   const [showmessage, setShowMessage] = useState(false);
   const navigate = useNavigate();
 
-  const handleSearch = async () => {
-    try {
-      if (!query.trim()) {
-        setresult([]);
-        setShowMessage(false);
-        return;
-      }
-      const res = await axios.get("http://localhost:5000/illness");
-      const filterSearch = res.data.filter((con) =>
-        con.name.toLowerCase().includes(query.toLowerCase())
-      ); // make all capital letter to lower
-
-      setresult(filterSearch);
-      setShowMessage(filterSearch.length === 0);
-    } catch (e) {
-      console.error("Failed Connection", e);
-    }
-  };
-
-  // when user clicks on button
-  const handleButtonClick = () => {
-    handleSearch();
-  };
-
   // handle on link click
   const handleItemClick = (id) => {
     navigate(`/Single_illness/${id}`);
   };
 
   useEffect(() => {
+    const handleSearch = async () => {
+      try {
+        if (!query.trim()) {
+          setresult([]);
+          setShowMessage(false);
+          return;
+        }
+        const res = await axios.get("https://data-healthcare.onrender.com/illness");
+        const filterSearch = res.data.filter((con) =>
+          con.name.toLowerCase().includes(query.toLowerCase())
+        ); // make all capital letter to lower
+  
+        setresult(filterSearch);
+        setShowMessage(filterSearch.length === 0);
+      } catch (e) {
+        console.error("Failed Connection", e);
+      }
+    };
     handleSearch();
     AOS.init();
   }, [query]);
@@ -61,7 +54,7 @@ const Search = () => {
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <div className="sch-box">
+        <div className="sch-box add">
           <div className="box-top">
             <span>Start your search </span>
             <span>
@@ -91,7 +84,6 @@ const Search = () => {
               </select>
             </div>
             <button
-              onClick={handleButtonClick}
               type="submit"
               className="btn px-3 border"
             >

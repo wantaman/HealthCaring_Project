@@ -55,12 +55,35 @@ img {
 .single_illness main .illness_con .illness_info .des {
   height: auto;
 }
-.single_illness main .illness_con .illness_info .des .line {
+.single_illness main .illness_con .illness_info .des .des-con {
+  display: flex;
+  gap: 2rem;
+}
+.single_illness main .illness_con .illness_info .des .des-con .left {
+  width: 65%;
+}
+.single_illness main .illness_con .illness_info .des .des-con .left .line {
   font-size: 20px;
   margin-bottom: 20px;
 }
-.single_illness main .illness_con .illness_info .des .line::first-letter {
+.single_illness main .illness_con .illness_info .des .des-con .left .line::first-letter {
   padding-left: 20px;
+}
+.single_illness main .illness_con .illness_info .des .des-con .right {
+  width: 35%;
+  height: auto;
+}
+.single_illness main .illness_con .illness_info .des .des-con .right img {
+  width: 300px;
+  height: 300px;
+}
+@media screen and (max-width: 992px) {
+  .single_illness main .illness_con .illness_info .des .des-con {
+    flex-direction: column;
+  }
+  .single_illness main .illness_con .illness_info .des .des-con .left, .single_illness main .illness_con .illness_info .des .des-con .right {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 728px) {
   .single_illness main .illness_con .illness_info {
@@ -80,6 +103,7 @@ img {
 }
 .single_illness main .illness_con .relate_hos .title {
   overflow: hidden;
+  font-weight: bold;
 }
 @media screen and (max-width: 728px) {
   .single_illness main .illness_con .relate_hos .title {
@@ -93,6 +117,7 @@ img {
 .single_illness main .illness_con .relate_hos .con_hos {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .single_illness main .illness_con .relate_hos .con_hos .box {
@@ -101,10 +126,13 @@ img {
   overflow: hidden;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in !important;
-  border: 1px solid rgba(0, 0, 0, 0.097);
+  border: 3px outset rgba(61, 68, 97, 0.137254902);
 }
 .single_illness main .illness_con .relate_hos .con_hos .box:hover {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.single_illness main .illness_con .relate_hos .con_hos .box:hover img {
+  filter: brightness(70%);
 }
 .single_illness main .illness_con .relate_hos .con_hos .box .pic {
   height: 260px;
@@ -113,11 +141,13 @@ img {
 .single_illness main .illness_con .relate_hos .con_hos .box .pic img {
   width: 100%;
   height: 100%;
+  transition: 0.4s ease-in;
 }
 .single_illness main .illness_con .relate_hos .con_hos .box .detail {
-  padding: 1rem;
+  padding: 1rem 1.4rem;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 17px;
+  overflow: hidden;
 }
 .single_illness main .illness_con .relate_hos .con_hos .box .detail .title {
   font-size: 25px;
@@ -137,6 +167,13 @@ img {
 }
 .single_illness main .illness_con .relate_hos .con_hos .box .detail p:last-child span a:hover {
   text-decoration: underline;
+}
+.single_illness main .illness_con .relate_hos .con_hos .box .detail .name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+  overflow: hidden;
+  height: 1.8rem;
 }
 @media screen and (max-width: 728px) {
   .single_illness main .illness_con .relate_hos .con_hos {

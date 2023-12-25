@@ -103,13 +103,36 @@
         .card-article:hover{
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             cursor: pointer;
+
         }
-        .con-fav{
-            text-align: right;
-            .fav{
-                margin: 0 10px;
+        .card-article{
+            .con-des{
+                    .type_illness{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    
+                }.des{
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                }
+            }
+            .con-fav{
+                text-align: right;
+                
+                .fav{
+                    margin: 0 10px;
+                }
             }
         }
+        
 
     }
     @media screen  and (max-width:1560px){

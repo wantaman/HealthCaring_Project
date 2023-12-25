@@ -169,12 +169,13 @@ img {
 }
 .contact main .contact_us .con1 .con1-center .center-right form .form-input {
   width: 100%;
-  height: 50px;
+  height: auto;
   margin-bottom: 10px;
 }
 .contact main .contact_us .con1 .con1-center .center-right form .form-input input {
   width: 100%;
   height: 100%;
+  padding: 15px;
 }
 .contact main .contact_us .con1 .con1-center .center-right form .button {
   background-color: #fff;

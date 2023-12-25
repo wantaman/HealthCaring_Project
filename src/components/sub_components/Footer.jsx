@@ -66,7 +66,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <b>Copyright @ 2023 by <span style={{color:"#0EC2FB"}}>HealthCare</span>. All Right Reserved </b>
+          <b>Copyright @ 2023 by <span style={{color:"#0EC2FB"}}>KERTEY</span>. All Right Reserved </b>
         </div>
       </div>
     </section>

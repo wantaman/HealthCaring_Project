@@ -9,6 +9,7 @@ img {
 
 .homepage .header {
   height: auto;
+  overflow: visible;
 }
 .homepage main {
   width: 100%;
@@ -20,11 +21,11 @@ img {
   margin-bottom: 20px;
 }
 .homepage main .filter {
-  height: max-content;
+  position: absolute;
+  height: 10vh;
   width: 70%;
   margin: 0 auto;
-  z-index: 10;
-  position: absolute;
+  z-index: 1;
   left: 50%;
   transform: translate(-50%, 0);
 }

@@ -23,6 +23,7 @@
   justify-content: center;
   gap: 25px;
   width: 100%;
+  overflow: hidden;
 }
 .team .con-bottom .bottom-box {
   width: 100%;

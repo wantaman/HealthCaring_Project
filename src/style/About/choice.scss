@@ -42,8 +42,14 @@ $orange :#FF5851;
                 font-weight: bold;
             }
             .des-img{
-                li{
-                    list-style:disc;
+                list-style:none;
+                padding: 0;
+                li::before{
+                    content: "\2022";
+                    color: $orange;
+                    font-weight: bold;
+                    display: inline-block; 
+                    width: 1em;
                 }
             }
         }
@@ -52,6 +58,15 @@ $orange :#FF5851;
     }
     @media screen and (max-width:728px){
         text-align: center;
-
+        .cho-title{
+            margin: 0 auto;
+        }
+        .cho-des{
+            .des-box{
+                .des-img{
+                    text-align: start;
+                }
+            }
+        }
     }
 }

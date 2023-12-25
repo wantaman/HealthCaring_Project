@@ -133,7 +133,7 @@ img {
 }
 .rating-contain .box-right .view-hospital .view-img img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
   transition: all 0.2s ease-in !important;
 }
@@ -150,6 +150,7 @@ img {
 }
 .rating-contain .box-right .view-hospital .view-detail .detail-name {
   color: #0EC2FB;
+  margin-top: 10px;
 }
 .rating-contain .box-right .view-hospital .view-detail .title {
   font-size: 1.5rem;

@@ -107,10 +107,26 @@ img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   cursor: pointer;
 }
-.article .art_contain .con-fav {
+.article .art_contain .card-article .con-des .type_illness {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.article .art_contain .card-article .con-des .des {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.article .art_contain .card-article .con-fav {
   text-align: right;
 }
-.article .art_contain .con-fav .fav {
+.article .art_contain .card-article .con-fav .fav {
   margin: 0 10px;
 }
 @media screen and (max-width: 1560px) {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .sec-choice {
   width: 100%;
   height: auto;
@@ -34,11 +35,25 @@
 .sec-choice .cho-des .des-box .point-img {
   font-weight: bold;
 }
-.sec-choice .cho-des .des-box .des-img li {
-  list-style: disc;
+.sec-choice .cho-des .des-box .des-img {
+  list-style: none;
+  padding: 0;
+}
+.sec-choice .cho-des .des-box .des-img li::before {
+  content: "•";
+  color: #FF5851;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
 }
 @media screen and (max-width: 728px) {
   .sec-choice {
     text-align: center;
+  }
+  .sec-choice .cho-title {
+    margin: 0 auto;
+  }
+  .sec-choice .cho-des .des-box .des-img {
+    text-align: start;
   }
 }

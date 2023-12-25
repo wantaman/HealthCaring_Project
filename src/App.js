@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import Doctor from './components/Doctor';
 import Single_illness from './components/sub_components/Single_illness';
 import Map from './components/google_map/Map';
+import Public from './components/hospital/Public';
+import Private from './components/hospital/Private';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='/Exper_Doctor' element={<Doctor/>}/>
         <Route path='/Single_illness/:id' element={<Single_illness/>}/>
         <Route path='/Single_illness/google map/:id' element ={<Map/>}/>
+        <Route  path='/Public Hospital' element={<Public/>}/>
+        <Route path='/Private Hospital' element={<Private/>}/>
       </Routes>
     </BrowserRouter>
   );

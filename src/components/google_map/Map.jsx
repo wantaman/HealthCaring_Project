@@ -1,19 +1,20 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loading from "../sub_components/Loading";
 
 const Map = () => {
   const { id } = useParams();
   const [data, setData] = useState();
-
   useEffect(() => {
     const getMap = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/hospital/${id}`);
+        const response = await axios.get(`https://data-healthcare.onrender.com/hospital/${id}`);
         setData(response.data);
       } catch (error) {
         console.error(error);
       }
+
     };
     getMap();
   }, [id]);
@@ -26,13 +27,18 @@ const Map = () => {
             src={data.location[0].embed}
             style={{ width: "100%", height: "800px", border: "none" }}
             frameBorder="0"
+            allowfullscreen=""
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
           <footer className="container-fluid bg-dark text-light text-center p-2">
-            <p className="">Copyright@by HealtCare</p>
+            <p className="">Copyright@by KERTEY</p>
           </footer>
         </>
       ) : (
-        <p>Loading...</p>
+        <div>
+          <Loading/>
+        </div>
       )}
     </div>
   );

@@ -34,11 +34,11 @@ const About_choice = () => {
                     <h3 className='point-img'>
                         User-Friendly Interface
                     </h3>
-                    <p className="des-img">
+                    <ul className="des-img">
                         <li>Design a clean and intuitive user interface that is easy to navigate for users of all ages and technological backgrounds.</li>
                         <li>Ensure accessibility features to make the website usable for individuals with disabilities, such as screen readers and keyboard navigation.</li>
                         <li>Provide multilingual support to cater to a diverse audience and enhance accessibility for non-English speakers.</li>
-                    </p>
+                    </ul>
                 </div>
                 <div className="des-box"
                 data-aos="zoom-in">

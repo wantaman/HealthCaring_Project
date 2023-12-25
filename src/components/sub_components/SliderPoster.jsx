@@ -14,8 +14,7 @@ import "swiper/css/navigation";
 import "../../style/home/carosual.scss"
 import { Autoplay, Pagination } from "swiper/modules";
 
-
-const Slider_poster = () => {
+const SliderPoster = () => {
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
   return (
@@ -142,4 +141,4 @@ const Slider_poster = () => {
   )
 }
 
-export default Slider_poster;
+export default SliderPoster;

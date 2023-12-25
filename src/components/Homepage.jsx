@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './sub_components/Header';
 import "../style/home/home.scss"
-import Slider_poster from './sub_components/Slider_poster';
+import SliderPoster from './sub_components/SliderPoster';
 import Search from './sub_components/Search';
 import Intro_dtor from './sub_components/Intro_dtor';
 import Rating_hos from './sub_components/Rating_hos';
@@ -21,7 +21,7 @@ const Homepage = () => {
       {/* Contain */}
       <main>
         <div className="silder">
-          <Slider_poster/>
+          <SliderPoster/>
         </div>
         <div className="filter">
           <Search/>
@@ -30,7 +30,7 @@ const Homepage = () => {
           <Intro_dtor/>
         </div>
         <div className="rating">
-          <Rating_hos/>
+          <Rating_hos />
         </div>
         <div className="problem_pt">
           <Problem/>

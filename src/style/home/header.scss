@@ -1,6 +1,7 @@
 @import "config";
 
 section {
+
     .contain-1 {
         width: 100%;
         height: 40%;
@@ -46,6 +47,7 @@ section {
         width: 100%;
         height: 55%;
         background: #fff;
+
         .con2 {
             margin: 0 auto;
             padding: 15px 0;
@@ -53,6 +55,8 @@ section {
             height: auto;
             display: flex;
             justify-content: space-between;
+            // border: 1px solid black;
+
             .con2-img {
                 width: 100px;
                 height: 100%;
@@ -66,7 +70,6 @@ section {
                 display: inline-flex;
                 align-items: center;
                 font-weight: 700;
-
                 @media screen and (max-width:768px){
                     display: none;
                 }
@@ -98,6 +101,7 @@ section {
                             bottom: 0;
                             height: 2px;
                             width: 0;
+
                             background-color: #323a57;
                             transition: 0.3s ease-in !important;
                         }
@@ -238,8 +242,79 @@ section {
         }
         
         
-    }
+    }  
+}
 
-   
-    
+
+.fade {
+    .login{
+        background: #323a57;
+        width: auto;
+        height: max-content;
+        color: #fff;
+        padding: 1rem 2rem;
+        .title{
+            position: relative;
+            padding: 7px 0;
+            display: flex;
+            justify-content: space-between;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 15%;
+                height: 2px;
+                background-color: #8BC6EC;
+                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            }
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 10px 0;
+            .name{
+                display: block;
+            }
+            .form{
+                width: auto;
+                padding: 1rem;
+                border-radius: 0.3rem;
+                font-size: 1rem;
+                &::placeholder{
+                    font-size: 1rem;
+                    color: #323a5766;
+                }    
+                &:focus{
+                    border: 2px solid #0ec2fb;
+                }            
+            }
+        }
+        .select{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 15px 0;
+            .option{
+                display:inline-flex;
+                gap: 20px;
+            }
+        }
+        .btn{
+            border: 1px outset #fff;
+            color: #fff;
+            float: right;
+            padding: 15px 20px;
+            font-weight: 600;
+            transition:.2s ease-in-out !important;
+            box-shadow: 2px 1px 5px #fff;
+            &:hover{
+                background: #0ec2fb;
+                transform: translate(10px, 0);
+                box-shadow: 2px 1px 5px #0ec2fb;
+
+            }
+        }
+    }
 }
