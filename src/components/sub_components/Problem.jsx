@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../../style/home/problem.scss";
-import qr from "../../assets/image/qr_1.svg";
 import banner from "../../assets/image/pro_1.webp";
 import { AspectRatio, Card, CardContent, IconButton } from "@mui/joy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,7 +53,7 @@ const Problem = () => {
               </p>
             </div>
             <div className="dt-end">
-              <img src={qr} alt="" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/ambulancecar-dd464.appspot.com/o/pro_1.webp?alt=media&token=618e0392-2e87-4d6a-9148-fe7bca5a7772" alt="" />
               {/* <span>Contact Us</span> */}
             </div>
           </div>

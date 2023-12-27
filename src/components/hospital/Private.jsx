@@ -333,7 +333,7 @@ const Private = () => {
                         </span>
                         <br />
                         <button className="btn-direction" type="submit">
-                          <Link to={"/"}>Direction</Link>
+                          <Link to={`/Single_illness/google map/${hospital.id}`}>Direction</Link>
                         </button>
                       </div>
                     </div>

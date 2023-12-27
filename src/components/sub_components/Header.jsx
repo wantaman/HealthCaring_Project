@@ -89,7 +89,6 @@ const Header = () => {
           <div className="con2">
             <div className="con2-img">
               <Link to={"/"}><img src={logo} alt="" /></Link>
-              
             </div>
             <div className="con2-nav">
               <ul className="nav">
