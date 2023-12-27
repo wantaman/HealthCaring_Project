@@ -36,7 +36,7 @@ const Problem = () => {
       <div className="issue_patient">
         <div className="center-issue">
           <div className="cen-img">
-            <img src={banner} alt="" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/ambulancecar-dd464.appspot.com/o/pro_1.webp?alt=media&token=618e0392-2e87-4d6a-9148-fe7bca5a7772" alt="" />
           </div>
           <div className="cen-detial">
             <div className="dt-start">
@@ -53,7 +53,7 @@ const Problem = () => {
               </p>
             </div>
             <div className="dt-end">
-              <img src="https://firebasestorage.googleapis.com/v0/b/ambulancecar-dd464.appspot.com/o/pro_1.webp?alt=media&token=618e0392-2e87-4d6a-9148-fe7bca5a7772" alt="" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/ambulancecar-dd464.appspot.com/o/KertEy%20System.png?alt=media&token=846383e9-8c13-444c-a62b-52f3bdaaf791" alt="" />
               {/* <span>Contact Us</span> */}
             </div>
           </div>
