@@ -233,6 +233,8 @@ img {
 }
 .intro_feature .profile-doctor .des .des-button .button-white:hover {
   background-color: #0EC2FB;
+}
+.intro_feature .profile-doctor .des .des-button .button-white:hover a {
   color: #fff;
 }
 .intro_feature .profile-doctor .des .des-button .button-blue {
