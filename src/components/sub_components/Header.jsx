@@ -29,10 +29,10 @@ function getItem(label, key, to, children, type) {
 const items = [
   getItem("Home", "sub1", "/"),
   getItem("illness Type", "sub2", "", [
-    getItem("Infectious Diseases", "5","/Infectious"),
-    getItem("Cancer", "6","/Cancer"),
-    getItem("Respiratory Diseases", "7","/Respiratory"),
-    getItem("Cardiovascular Diseases", "8","/Cardiovascular"),
+    getItem("Infectious Diseases", "5","/Infection Disease"),
+    getItem("Cancer", "6","/Cancer Disease"),
+    getItem("Respiratory Diseases", "7","/Respiratory Disease"),
+    getItem("Cardiovascular Diseases", "8","/Cardiovascular Disease"),
   ]),
   getItem("Hospital", "sub4", "", [
     getItem("Public Hospital", "9","/Public Hospital"),
@@ -71,10 +71,10 @@ const Header = () => {
             <b>+855 8944022</b>
           </div>
           <div className="con1-social-media">
-            <FontAwesomeIcon className="icon" icon={faSquareFacebook} />
-            <FontAwesomeIcon className="icon" icon={faTwitter} />
-            <FontAwesomeIcon className="icon" icon={faLinkedin} />
-            <FontAwesomeIcon className="icon" icon={faYoutube} />
+            <a href="www.Facebook.com?KERTEY"><FontAwesomeIcon className="icon" icon={faSquareFacebook} /></a>
+            <a href="www.Twitter.com?KERTEY"><FontAwesomeIcon className="icon" icon={faTwitter} /></a>
+            <a href="www.Linkedin.com?KERTEY"><FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
+            <a href="www.YouTube.com?KERTEY"><FontAwesomeIcon className="icon" icon={faYoutube} /></a>
           </div>
         </div>
       </div>
@@ -100,16 +100,16 @@ const Header = () => {
                   <Link className="nav-hover">illnesses Type</Link>
                   <ul className="dropdown">
                     <li>
-                      <Link className="down-hover">Infectious Diseases</Link>
+                      <Link to={"/Infection Disease"} className="down-hover">Infectious Diseases</Link>
                     </li>
                     <li>
-                      <Link className="down-hover">Cancer</Link>
+                      <Link to={"/Cancer Disease"} className="down-hover">Cancer</Link>
                     </li>
                     <li>
-                      <Link className="down-hover">Respiratory Diseases</Link>
+                      <Link to={"/Respiratory Disease"} className="down-hover">Respiratory Diseases</Link>
                     </li>
                     <li>
-                      <Link className="down-hover">
+                      <Link to={"/Cardiovascular Disease"} className="down-hover">
                         Cardiovascular Diseases
                       </Link>
                     </li>
@@ -192,12 +192,12 @@ const Header = () => {
       <div className="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content login">
-
-            <form action="" method="GET">
-              <p className="title">
-                <h3>Login</h3>
-                <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
-              </p>
+            <p className="title">
+              <h3>Login</h3>
+              <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </p>
+            <form action="" className="card_form" method="GET">
+              
               <div className="input">
                 <label className="name">Username</label>
                 <input type="text" name="username" id="" className="form form-control" placeholder="Enter your username..."/>

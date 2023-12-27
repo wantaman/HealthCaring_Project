@@ -1,0 +1,373 @@
+@charset "UTF-8";
+a {
+  text-decoration: none;
+  color: #3D4461;
+}
+
+img {
+  object-fit: cover;
+}
+
+.illness main {
+  margin-top: 20px;
+}
+.illness main .search {
+  width: 100%;
+  height: 100%;
+  background-color: #3d4461;
+}
+.illness main .search .sch-box {
+  width: 75%;
+  height: 100%;
+  background: #3d4461;
+  padding: 0 1.5rem 0 1.5rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 15px;
+}
+.illness main .search .sch-box .box-top {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: start;
+  color: #fff;
+  font-size: 15px;
+}
+.illness main .search .sch-box .box-top span {
+  font-weight: bold;
+}
+.illness main .search .sch-box .box-top p {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 992px) {
+  .illness main .search .sch-box .box-top {
+    display: none;
+  }
+}
+.illness main .search .sch-box .box-bottom {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 1.3rem 0;
+}
+.illness main .search .sch-box .box-bottom .search-input {
+  width: 49%;
+  margin: 0 10px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .illness main .search .sch-box .box-bottom .search-input {
+    margin: 0;
+  }
+}
+.illness main .search .sch-box .box-bottom .search-input .dropdown_search {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.257);
+  width: 300px;
+  height: 150px;
+  bottom: -100%;
+  transform: translateY(60%);
+  left: 0;
+  z-index: 10;
+}
+@media screen and (max-width: 728px) {
+  .illness main .search .sch-box .box-bottom .search-input .dropdown_search {
+    width: 275px;
+  }
+}
+.illness main .search .sch-box .box-bottom .btn-border {
+  border: 1.2px solid #55acee;
+}
+@media screen and (max-width: 992px) {
+  .illness main .search .sch-box .box-bottom {
+    flex-direction: column;
+  }
+  .illness main .search .sch-box .box-bottom .search-input,
+  .illness main .search .sch-box .box-bottom .btn-border {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: -10px;
+  }
+  .illness main .search .sch-box .box-bottom .search-input:nth-child(2) {
+    display: block;
+  }
+}
+@media screen and (max-width: 1256px) {
+  .illness main .search .sch-box {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .illness main .search .sch-box .box-top, .illness main .search .sch-box .box-bottom {
+    width: 100%;
+  }
+}
+.illness main .contains {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1205px) {
+  .illness main .contains {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 728px) {
+  .illness main .contains {
+    width: 100%;
+  }
+}
+.illness main .contains .head-navigate {
+  margin-top: 10px;
+}
+.illness main .contains .head-navigate ul {
+  display: flex;
+}
+.illness main .contains .main {
+  padding-left: 25px;
+  font-size: 20px;
+}
+.illness main .contains .main .con-title {
+  margin-bottom: 15px;
+}
+.illness main .contains .main .con-title .title {
+  width: 60%;
+  height: auto;
+  padding: 25px 0;
+  position: relative;
+}
+.illness main .contains .main .con-title .title .h1 {
+  font-weight: bold;
+  font-size: 55px;
+}
+.illness main .contains .main .con-title .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 10%;
+  background: #55acee;
+}
+.illness main .contains .main .con-title .spp-title {
+  width: 50%;
+  height: auto;
+  padding: 25px 0;
+  color: rgba(61, 68, 97, 0.7607843137);
+  overflow: hidden;
+}
+.illness main .contains .main .con-title .spp-title::first-letter {
+  margin-left: 20px;
+}
+@media screen and (max-width: 992px) {
+  .illness main .contains .main .con-title .title, .illness main .contains .main .con-title .spp-title {
+    width: 100%;
+  }
+}
+.illness main .contains .main .content {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.illness main .contains .main .content .c-left {
+  width: 70%;
+  height: 100%;
+  border-right: 1px solid rgba(61, 68, 97, 0.1843137255);
+  padding: 0 10px;
+}
+.illness main .contains .main .content .c-left .overview, .illness main .contains .main .content .c-left .symptoms, .illness main .contains .main .content .c-left .diagnosis, .illness main .contains .main .content .c-left .management, .illness main .contains .main .content .c-left .Outlook, .illness main .contains .main .content .c-left .question {
+  height: auto;
+  width: 100%;
+}
+.illness main .contains .main .content .c-left .overview .h1, .illness main .contains .main .content .c-left .symptoms .h1, .illness main .contains .main .content .c-left .diagnosis .h1, .illness main .contains .main .content .c-left .management .h1, .illness main .contains .main .content .c-left .Outlook .h1, .illness main .contains .main .content .c-left .question .h1 {
+  font-weight: bold;
+}
+.illness main .contains .main .content .c-left .overview .con-overview, .illness main .contains .main .content .c-left .symptoms .con-overview, .illness main .contains .main .content .c-left .diagnosis .con-overview, .illness main .contains .main .content .c-left .management .con-overview, .illness main .contains .main .content .c-left .Outlook .con-overview, .illness main .contains .main .content .c-left .question .con-overview {
+  padding: 10px 0;
+  width: 70%;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .h2, .illness main .contains .main .content .c-left .symptoms .con-overview .h2, .illness main .contains .main .content .c-left .diagnosis .con-overview .h2, .illness main .contains .main .content .c-left .management .con-overview .h2, .illness main .contains .main .content .c-left .Outlook .con-overview .h2, .illness main .contains .main .content .c-left .question .con-overview .h2 {
+  font-weight: bold;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des, .illness main .contains .main .content .c-left .management .con-overview .spp-des, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des, .illness main .contains .main .content .c-left .question .con-overview .spp-des {
+  color: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg {
+  display: flex;
+  gap: 10px;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg .des {
+  width: 60%;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg .img {
+  width: 300px;
+  height: 300px;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg .img img, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg .img img, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg .img img, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg .img img, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg .img img, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg .img img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 728px) {
+  .illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg {
+    flex-direction: column;
+  }
+  .illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg .des, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg .des {
+    width: 100%;
+  }
+  .illness main .contains .main .content .c-left .overview .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .management .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .desImg .img, .illness main .contains .main .content .c-left .question .con-overview .spp-des .desImg .img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des::first-letter, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des::first-letter, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des::first-letter, .illness main .contains .main .content .c-left .management .con-overview .spp-des::first-letter, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des::first-letter, .illness main .contains .main .content .c-left .question .con-overview .spp-des::first-letter {
+  margin-left: 20px;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .link-list, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .link-list, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .link-list, .illness main .contains .main .content .c-left .management .con-overview .spp-des .link-list, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .link-list, .illness main .contains .main .content .c-left .question .con-overview .spp-des .link-list {
+  color: #55acee;
+  position: relative;
+  font-style: italic;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .link-list::before, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .link-list::before, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .link-list::before, .illness main .contains .main .content .c-left .management .con-overview .spp-des .link-list::before, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .link-list::before, .illness main .contains .main .content .c-left .question .con-overview .spp-des .link-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #55acee;
+  left: 0;
+  bottom: 0;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .link-list:hover, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .link-list:hover, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .link-list:hover, .illness main .contains .main .content .c-left .management .con-overview .spp-des .link-list:hover, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .link-list:hover, .illness main .contains .main .content .c-left .question .con-overview .spp-des .link-list:hover {
+  color: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .overview .con-overview .spp-des .link-list:hover::before, .illness main .contains .main .content .c-left .symptoms .con-overview .spp-des .link-list:hover::before, .illness main .contains .main .content .c-left .diagnosis .con-overview .spp-des .link-list:hover::before, .illness main .contains .main .content .c-left .management .con-overview .spp-des .link-list:hover::before, .illness main .contains .main .content .c-left .Outlook .con-overview .spp-des .link-list:hover::before, .illness main .contains .main .content .c-left .question .con-overview .spp-des .link-list:hover::before {
+  background: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .overview .con-overview .h3, .illness main .contains .main .content .c-left .symptoms .con-overview .h3, .illness main .contains .main .content .c-left .diagnosis .con-overview .h3, .illness main .contains .main .content .c-left .management .con-overview .h3, .illness main .contains .main .content .c-left .Outlook .con-overview .h3, .illness main .contains .main .content .c-left .question .con-overview .h3 {
+  font-weight: bold;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list, .illness main .contains .main .content .c-left .symptoms .con-overview .list, .illness main .contains .main .content .c-left .diagnosis .con-overview .list, .illness main .contains .main .content .c-left .management .con-overview .list, .illness main .contains .main .content .c-left .Outlook .con-overview .list, .illness main .contains .main .content .c-left .question .con-overview .list {
+  color: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li, .illness main .contains .main .content .c-left .symptoms .con-overview .list li, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li, .illness main .contains .main .content .c-left .management .con-overview .list li, .illness main .contains .main .content .c-left .Outlook .con-overview .list li, .illness main .contains .main .content .c-left .question .con-overview .list li {
+  margin-bottom: 10px;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li::before, .illness main .contains .main .content .c-left .symptoms .con-overview .list li::before, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li::before, .illness main .contains .main .content .c-left .management .con-overview .list li::before, .illness main .contains .main .content .c-left .Outlook .con-overview .list li::before, .illness main .contains .main .content .c-left .question .con-overview .list li::before {
+  content: "•";
+  max-width: 1em;
+  margin-left: -1.8rem;
+  margin-right: 1rem;
+  color: #FF5851;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li .link-list, .illness main .contains .main .content .c-left .symptoms .con-overview .list li .link-list, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li .link-list, .illness main .contains .main .content .c-left .management .con-overview .list li .link-list, .illness main .contains .main .content .c-left .Outlook .con-overview .list li .link-list, .illness main .contains .main .content .c-left .question .con-overview .list li .link-list {
+  color: #55acee;
+  position: relative;
+  font-style: italic;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li .link-list::before, .illness main .contains .main .content .c-left .symptoms .con-overview .list li .link-list::before, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li .link-list::before, .illness main .contains .main .content .c-left .management .con-overview .list li .link-list::before, .illness main .contains .main .content .c-left .Outlook .con-overview .list li .link-list::before, .illness main .contains .main .content .c-left .question .con-overview .list li .link-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #55acee;
+  left: 0;
+  bottom: 0;
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li .link-list:hover, .illness main .contains .main .content .c-left .symptoms .con-overview .list li .link-list:hover, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li .link-list:hover, .illness main .contains .main .content .c-left .management .con-overview .list li .link-list:hover, .illness main .contains .main .content .c-left .Outlook .con-overview .list li .link-list:hover, .illness main .contains .main .content .c-left .question .con-overview .list li .link-list:hover {
+  color: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .overview .con-overview .list li .link-list:hover::before, .illness main .contains .main .content .c-left .symptoms .con-overview .list li .link-list:hover::before, .illness main .contains .main .content .c-left .diagnosis .con-overview .list li .link-list:hover::before, .illness main .contains .main .content .c-left .management .con-overview .list li .link-list:hover::before, .illness main .contains .main .content .c-left .Outlook .con-overview .list li .link-list:hover::before, .illness main .contains .main .content .c-left .question .con-overview .list li .link-list:hover::before {
+  background: rgba(61, 68, 97, 0.7607843137);
+}
+.illness main .contains .main .content .c-left .question {
+  border-bottom: 1px solid rgba(61, 68, 97, 0.1843137255);
+}
+.illness main .contains .main .content .c-right {
+  width: 30%;
+  height: 100%;
+}
+.illness main .contains .main .content .c-right .h1 {
+  font-weight: bold;
+  text-align: center;
+}
+.illness main .contains .main .content .c-right .box-relate {
+  height: 150px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.133);
+  border-radius: 0.5rem;
+  padding: 1.5rem 0.2rem;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.illness main .contains .main .content .c-right .box-relate .img {
+  width: 50%;
+  height: 100px;
+  position: relative;
+}
+.illness main .contains .main .content .c-right .box-relate .img img {
+  width: 100%;
+  height: 100%;
+}
+.illness main .contains .main .content .c-right .box-relate .img .new {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px 10px;
+  background: #FF5851;
+  color: #e8e8e8;
+}
+.illness main .contains .main .content .c-right .box-relate .des {
+  width: 38%;
+  height: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.illness main .contains .main .content .c-right .box-relate .des .name, .illness main .contains .main .content .c-right .box-relate .des .symptoms {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  line-height: 23px;
+  margin-top: 5px;
+}
+.illness main .contains .main .content .c-right .box-relate:hover img {
+  filter: brightness(70%);
+  transition: 0.3s ease-in-out !important;
+}
+@media screen and (max-width: 992px) {
+  .illness main .contains .main .content {
+    flex-direction: column;
+  }
+  .illness main .contains .main .content .c-left, .illness main .contains .main .content .c-right {
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .illness main .contains .main .content .c-left .overview .con-overview, .illness main .contains .main .content .c-left .symptoms .con-overview, .illness main .contains .main .content .c-left .diagnosis .con-overview, .illness main .contains .main .content .c-left .management .con-overview, .illness main .contains .main .content .c-left .Outlook .con-overview, .illness main .contains .main .content .c-left .question .con-overview, .illness main .contains .main .content .c-right .overview .con-overview, .illness main .contains .main .content .c-right .symptoms .con-overview, .illness main .contains .main .content .c-right .diagnosis .con-overview, .illness main .contains .main .content .c-right .management .con-overview, .illness main .contains .main .content .c-right .Outlook .con-overview, .illness main .contains .main .content .c-right .question .con-overview {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 728px) {
+  .illness main .contains .main {
+    padding: 0;
+  }
+  .illness main .contains .main .con-title, .illness main .contains .main .content {
+    padding: 0 15px;
+  }
+}
+.illness .concluding {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #3D4461;
+  color: #fff;
+}

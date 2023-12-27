@@ -111,10 +111,7 @@ const Rating_hos = () => {
               </div>
               <div className="left-des">
                 <div className="des">
-                  dolor sit, amet consectetur adipisicing elit. Asperiores
-                  praesentium provident excepturi fugiat nihil esse magnam
-                  numquam dolor distinctio inventore consectetur ipsa, ipsum
-                  suscipit ab dolores minus perferendis doloribus expedita.
+                At Our Hospital, your health is our priority, and we are honored to be a part of your healthcare journey. Trust us to provide not just medical expertise, but also compassion, respect, and the highest standards of care. Discover the difference at Our Hospital, where your well-being is our mission.
                 </div>
                 <button className="btn">
                   <Link
@@ -152,7 +149,7 @@ const Rating_hos = () => {
                       <p className="title">
                         <b>{item.name_host}</b>
                       </p>
-                      <span className="detail-made">Made in: 2014</span>
+                      <span className="detail-made">Build in: {item.year}</span>
 
                       <div className="star">
                         <Box

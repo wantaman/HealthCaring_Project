@@ -47,10 +47,10 @@ const Problem = () => {
                 <span>Comment it!</span>
               </p>
               <p className="detail-des">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit aliquid nam non libero numquam laboriosam dolor
-                ipsam laudantium omnis deleniti vero delectus, fuga amet, minima
-                quibusdam quod illum! Dolorem, est!
+                Our commitment is to address these challenges head-on. We
+                recognize the need for accessible, reliable information and the
+                importance of fostering a supportive environment for those
+                facing health-related concerns.
               </p>
             </div>
             <div className="dt-end">
@@ -67,10 +67,9 @@ const Problem = () => {
             Latest <span>Article</span>
           </h2>
           <p className="detail">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
-            laborum qui fugit, consequatur nostrum quo vel veritatis recusandae
-            sint quam, nesciunt excepturi repellat? Dolorum totam quas nemo
-            error, ducimus sapiente.
+            This article delves into the multifaceted aspects of health,
+            exploring the significance of adopting a holistic approach that
+            encompasses physical, mental, and emotional well-being.
           </p>
         </div>
         <div className="art_contain">

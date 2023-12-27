@@ -126,15 +126,18 @@
                     }
                 
                 }
-                .btn{
+                .btn-box{
                     display: block;
-                
+                    
                     .btn-1{
                         @include button_clr_sky;
                         padding: 1rem 2.5rem;
                         height:max-content;
                         font-size: 1.2rem;
                         margin: 0 5px;
+                        a{
+                            color: #fff;
+                        }
                     }
                     .btn-2{
                         @include button_clr_white;
@@ -142,17 +145,23 @@
                         height:max-content;
                         font-size: 1.2rem;
                         margin: 10px 5px;
+                        a{
+                            color:#3D4461;
+                        }
                     }
 
                     .btn-1:hover{
                         transform: translateY(-5px);
                         box-shadow: 2px 3px 2px #3d446139;
                     }
-                    .btn-2:hover{
+                   .btn-2:hover{
                         background-color: #0EC2FB;
                         color: #fff;
                         transform: translateY(-5px);
                         box-shadow: 2px 3px 2px #3d446139;
+                        a{
+                            color:#fff;
+                        }
                     }
                 }
             }

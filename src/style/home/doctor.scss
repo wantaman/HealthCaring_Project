@@ -156,7 +156,11 @@
                 }
                 .button-white:hover{
                     background-color: #0EC2FB;
-                    color: #fff;
+
+                    a{
+                        color: #fff; 
+                    }
+                    
                 }
                 .button-blue{
                     @include button_clr_sky;

@@ -148,10 +148,13 @@ img {
     overflow: hidden;
   }
 }
-.swiper-slide .view-background .vb-decription .d-idea .btn {
+.swiper-slide .view-background .vb-decription .d-idea .btn-box {
   display: block;
 }
-.swiper-slide .view-background .vb-decription .d-idea .btn .btn-1 {
+.swiper-slide .view-background .vb-decription .d-idea .btn-box a {
+  color: #fff;
+}
+.swiper-slide .view-background .vb-decription .d-idea .btn-box .btn-1 {
   background-color: #0EC2FB;
   color: #fff;
   font-weight: 700;
@@ -165,7 +168,7 @@ img {
   font-size: 1.2rem;
   margin: 0 5px;
 }
-.swiper-slide .view-background .vb-decription .d-idea .btn .btn-2 {
+.swiper-slide .view-background .vb-decription .d-idea .btn-box .btn-2 {
   background-color: #fff;
   color: #3D4461;
   font-weight: 700;
@@ -179,11 +182,11 @@ img {
   font-size: 1.2rem;
   margin: 10px 5px;
 }
-.swiper-slide .view-background .vb-decription .d-idea .btn .btn-1:hover {
+.swiper-slide .view-background .vb-decription .d-idea .btn-box .btn-1:hover {
   transform: translateY(-5px);
   box-shadow: 2px 3px 2px rgba(61, 68, 97, 0.2235294118);
 }
-.swiper-slide .view-background .vb-decription .d-idea .btn .btn-2:hover {
+.swiper-slide .view-background .vb-decription .d-idea .btn-box .btn-2:hover {
   background-color: #0EC2FB;
   color: #fff;
   transform: translateY(-5px);

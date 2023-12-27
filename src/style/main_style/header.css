@@ -30,25 +30,25 @@ section .contain-1 .con1 .con1-emergency b {
 section .contain-1 .con1 .con1-social-media {
   float: right;
 }
-section .contain-1 .con1 .con1-social-media .icon {
+section .contain-1 .con1 .con1-social-media a .icon {
   font-size: 30px;
   margin: 10px 0 0 8px;
   cursor: pointer;
   transition: all 0.2s ease-in !important;
 }
-section .contain-1 .con1 .con1-social-media .icon:nth-child(1):hover {
+section .contain-1 .con1 .con1-social-media a:nth-child(1) .icon:hover {
   transition: 0.3s ease-in-out !important;
   color: #4267B2;
 }
-section .contain-1 .con1 .con1-social-media .icon:nth-child(2):hover {
+section .contain-1 .con1 .con1-social-media a:nth-child(2) .icon:hover {
   transition: 0.3s ease-in-out !important;
   color: #1DA1F2;
 }
-section .contain-1 .con1 .con1-social-media .icon:nth-child(3):hover {
+section .contain-1 .con1 .con1-social-media a:nth-child(3) .icon:hover {
   transition: 0.3s ease-in-out !important;
   color: #0a66c2;
 }
-section .contain-1 .con1 .con1-social-media .icon:nth-child(4):hover {
+section .contain-1 .con1 .con1-social-media a:nth-child(4) .icon:hover {
   transition: 0.3s ease-in-out !important;
   color: #FF0000;
 }

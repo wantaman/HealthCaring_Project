@@ -52,9 +52,9 @@ const SliderPoster = () => {
                              companion on your health journey. The culmination of these features ensures a holistic approach to healthcare, empowering individuals to make informed decisions
                               and receive expert guidance. 
                             </p>
-                            <div className="btn">
-                                <button className='btn-1'>View Hospital</button>
-                                <button className='btn-2'>Show illness</button>
+                            <div className="btn-box">
+                                <button className='btn-1'><a href='/Public Hospital'>View Hospital</a></button>
+                                <button className='btn-2'><a href="/Cancer Disease">Show illness</a></button>
                             </div>
                         </div>
                     </div>
@@ -74,9 +74,9 @@ const SliderPoster = () => {
                             <p className="description">
                                 The conversation sets the stage for a collaborative and informative exchange with an experienced doctor. Always consult with a healthcare professional for personalized advice and guidance.
                             </p>
-                            <div className="btn">
-                                <button className='btn-1'>View Hospital</button>
-                                <button className='btn-2'>Show illness</button>
+                            <div className="btn-box">
+                                <button className='btn-1'><a href='/Public Hospital'>View Hospital</a></button>
+                                <button className='btn-2'><a href="/Cancer Disease">Show illness</a></button>
                             </div>
                         </div>
                     </div>
@@ -100,9 +100,9 @@ const SliderPoster = () => {
                               prescribed, make sure you understand how to take them properly. Remember, open communication with your
                                healthcare provider is key to receiving the best possible care. 
                             </p>
-                            <div className="btn">
-                                <button className='btn-1'>View Hospital</button>
-                                <button className='btn-2'>Show illness</button>
+                            <div className="btn-box">
+                                <button className='btn-1'><a href='/Public Hospital'>View Hospital</a></button>
+                                <button className='btn-2'><a href="/Cancer Disease">Show illness</a></button>
                             </div>
                         </div>
                     </div>
@@ -122,9 +122,9 @@ const SliderPoster = () => {
                             <p className="description">
                             As the body gradually heals, incorporating gradual increases in physical activity, under medical guidance, can help rebuild strength and endurance. Each individual's recovery journey is unique, and acknowledging the small victories along the way contributes to a sense of accomplishment and resilience during this period.
                             </p>
-                            <div className="btn">
-                                <button className='btn-1'>View Hospital</button>
-                                <button className='btn-2'>Show illness</button>
+                            <div className="btn-box">
+                                <button className='btn-1'><a href='/Public Hospital'>View Hospital</a></button>
+                                <button className='btn-2'><a href="/Cancer Disease">Show illness</a></button>
                             </div>
                         </div>
                     </div>
