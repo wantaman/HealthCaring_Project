@@ -107,14 +107,12 @@ const Intro_dtor = () => {
               <h1 className="title">
                 How it <span>works?</span>
               </h1>
-              <p className="des">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Incidunt ullam itaque explicabo, alias quaerat sed natus nihil
-                corrupti nam nemo asperiores ab sunt quibusdam illo. Quae sit
-                corporis officia harum. Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Rem numquam tempore nam repellendus veniam
-                iusto incidunt in et iste, provident beatae doloremque?
-                Consequatur hic amet illo quia, ratione odit aperiam.
+              <p className="des" style={{fontStyle:"italic"}}>
+                Grateful for the opportunity to engage in a professional
+                dialogue today regarding the enhancement of our Health Caring
+                System. Productive appointment with key stakeholders, discussing
+                innovative strategies to elevate patient care. Your valuable
+                feedback is instrumental in shaping a healthier future for all.
               </p>
             </div>
           </div>

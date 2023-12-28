@@ -8,7 +8,8 @@ import { faBarChart } from "@fortawesome/free-solid-svg-icons";
 import Map_cate from "../sub_components/Map_cate";
 import Footer from "../sub_components/Footer";
 import Loading from "../sub_components/Loading";
-import lung from "../../assets/image/lung.jpg"
+import lung from "../../assets/image/lung.jpg";
+import Aos from "aos";
 
 const Cancer = () => {
   const [query, setquery] = useState("");
@@ -46,11 +47,6 @@ const Cancer = () => {
   const handleItemClick = (id) => {
     navigate(`/Single_illness/${id}`);
   };
-  useEffect(() => {
-    handleSearch();
-    // Aos.init();
-  }, [query]);
-
   const shuffleArray = (array) => {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -78,7 +74,9 @@ const Cancer = () => {
       }
     };
     relateIllness();
-  }, []);
+    handleSearch();
+    Aos.init();
+  }, [query]);
 
   const handleRelateIllness = (id) => {
     navigate(`/Single_illness/${id}`);
@@ -183,7 +181,8 @@ const Cancer = () => {
                 </div>
                 <div className="content">
                   <div className="c-left">
-                    <div className="overview">
+                    <div className="overview" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Overview</h1>
                       <div className="con-overview">
                         <h2 className="h2">What is cancer?</h2>
@@ -265,7 +264,8 @@ const Cancer = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="symptoms">
+                    <div className="symptoms" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Symptoms and Causes</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -325,7 +325,8 @@ const Cancer = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="diagnosis">
+                    <div className="diagnosis" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Diagnosis and Tests</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -416,7 +417,8 @@ const Cancer = () => {
                         <p className="spp-des">Though stages one through four are the most common, there’s also a Stage 0. This earliest phase describes cancer that’s still localized to the area in which it started. Cancers that are still in Stage 0 are usually easily treatable and are considered pre-cancerous by most healthcare providers.</p>
                       </div>
                     </div>
-                    <div className="management">
+                    <div className="management" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Management and Treatment</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -469,7 +471,8 @@ const Cancer = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="Outlook">
+                    <div className="Outlook" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Outlook / Prognosis</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -489,7 +492,8 @@ const Cancer = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="question">
+                    <div className="question" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Living With</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -516,7 +520,7 @@ const Cancer = () => {
                   <div className="c-right">
                     <h1 className="h1">Relate illness</h1>
                     {illness.map((item, index) => (
-                      <div className="box-relate" key={index}>
+                      <div className="box-relate" key={index} data-aos="zoom-in">
                         <div className="img">
                           <img src={item.img} alt="" />
                           <span className="new">new</span>

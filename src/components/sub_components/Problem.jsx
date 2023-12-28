@@ -45,7 +45,7 @@ const Problem = () => {
                 <br />
                 <span>Comment it!</span>
               </p>
-              <p className="detail-des">
+              <p className="detail-des" style={{fontStyle:"italic"}}>
                 Our commitment is to address these challenges head-on. We
                 recognize the need for accessible, reliable information and the
                 importance of fostering a supportive environment for those

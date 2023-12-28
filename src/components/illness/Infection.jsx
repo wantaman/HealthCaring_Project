@@ -8,6 +8,8 @@ import { faBarChart } from "@fortawesome/free-solid-svg-icons";
 import Map_cate from "../sub_components/Map_cate";
 import Footer from "../sub_components/Footer";
 import Loading from "../sub_components/Loading"
+import Aos from "aos";
+
 
 const Infection = () => {
   const [query, setquery] = useState("");
@@ -16,6 +18,7 @@ const Infection = () => {
   const [illness, setIllness] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
 
   const handleSearch = async () => {
     try {
@@ -45,10 +48,6 @@ const Infection = () => {
   const handleItemClick = (id) => {
     navigate(`/Single_illness/${id}`);
   };
-  useEffect(() => {
-    handleSearch();
-    // Aos.init();
-  }, [query]);
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array];
@@ -77,7 +76,9 @@ const Infection = () => {
       }
     };
     relateIllness();
-  }, []);
+    handleSearch();
+    Aos.init();
+  }, [query]); 
 
   const handleRelateIllness = (id) => {
     navigate(`/Single_illness/${id}`);
@@ -188,7 +189,8 @@ const Infection = () => {
               </div>
               <div className="content">
                 <div className="c-left">
-                  <div className="overview">
+                  <div className="overview" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                     <h1 className="h1">Overview</h1>
                     <div className="con-overview">
                       <h2 className="h2">What are infectious diseases?</h2>
@@ -532,7 +534,8 @@ const Infection = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="symptoms">
+                  <div className="symptoms" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                     <h1 className="h1">Symptoms and Causes</h1>
                     <div className="con-overview">
                       <h2 className="h2">
@@ -584,7 +587,8 @@ const Infection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="diagnosis">
+                  <div className="diagnosis" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                     <h1 className="h1">Diagnosis and Tests</h1>
                     <div className="con-overview">
                       <h2 className="h2">
@@ -633,7 +637,8 @@ const Infection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="management">
+                  <div className="management" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                     <h1 className="h1">Management and Treatment</h1>
                     <div className="con-overview">
                       <h2 className="h2">
@@ -693,7 +698,8 @@ const Infection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="Outlook">
+                  <div className="Outlook" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                     <h1 className="h1">Outlook / Prognosis</h1>
                     <div className="con-overview">
                       <h2 className="h2">
@@ -728,7 +734,8 @@ const Infection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="question">
+                  <div className="question" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"              >
                     <h1 className="h1">Additional Common Questions</h1>
                     <div className="con-overview">
                       <h2 className="h2">
@@ -825,7 +832,7 @@ const Infection = () => {
                 <div className="c-right">
                   <h1 className="h1">Relate illness</h1>
                   {illness.map((item, index) => (
-                    <div className="box-relate" key={index}>
+                    <div className="box-relate" key={index} data-aos="zoom-in">
                       <div className="img">
                         <img src={item.img} alt="" />
                         <span className="new">new</span>

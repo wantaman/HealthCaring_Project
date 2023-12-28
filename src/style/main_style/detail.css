@@ -1,0 +1,215 @@
+a {
+  text-decoration: none;
+  color: #3D4461;
+}
+
+img {
+  object-fit: cover;
+}
+
+.detail .header {
+  height: auto;
+}
+.detail main .search {
+  width: 100%;
+  height: 100%;
+  background-color: #3d4461;
+}
+.detail main .search .sch-box {
+  width: 75%;
+  height: 100%;
+  background: #3d4461;
+  padding: 0 1.5rem 0 1.5rem;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 15px;
+}
+.detail main .search .sch-box .box-top {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: start;
+  color: #fff;
+  font-size: 15px;
+}
+.detail main .search .sch-box .box-top span {
+  font-weight: bold;
+}
+.detail main .search .sch-box .box-top p {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 992px) {
+  .detail main .search .sch-box .box-top {
+    display: none;
+  }
+}
+.detail main .search .sch-box .box-bottom {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding: 1.3rem 0;
+}
+.detail main .search .sch-box .box-bottom .search-input {
+  width: 49%;
+  margin: 0 10px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .detail main .search .sch-box .box-bottom .search-input {
+    margin: 0;
+  }
+}
+.detail main .search .sch-box .box-bottom .search-input .dropdown_search {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.257);
+  width: 300px;
+  height: 150px;
+  bottom: -100%;
+  transform: translateY(60%);
+  left: 0;
+  z-index: 10;
+}
+@media screen and (max-width: 728px) {
+  .detail main .search .sch-box .box-bottom .search-input .dropdown_search {
+    width: 275px;
+  }
+}
+.detail main .search .sch-box .box-bottom .btn-border {
+  border: 1.2px solid #55acee;
+}
+@media screen and (max-width: 992px) {
+  .detail main .search .sch-box .box-bottom {
+    flex-direction: column;
+  }
+  .detail main .search .sch-box .box-bottom .search-input,
+  .detail main .search .sch-box .box-bottom .btn-border {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: -10px;
+  }
+  .detail main .search .sch-box .box-bottom .search-input:nth-child(2) {
+    display: block;
+  }
+}
+@media screen and (max-width: 1256px) {
+  .detail main .search .sch-box {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .detail main .search .sch-box .box-top,
+  .detail main .search .sch-box .box-bottom {
+    width: 100%;
+  }
+}
+.detail main .detail-con {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 728px) {
+  .detail main .detail-con {
+    width: 100%;
+  }
+}
+.detail main .detail-con .head-navigate {
+  margin-top: 10px;
+}
+.detail main .detail-con .head-navigate ul {
+  display: flex;
+}
+.detail main .detail-con .head-navigate ul a {
+  padding: 0;
+}
+.detail main .detail-con .illness_info {
+  padding-left: 2rem;
+  margin-top: 43px;
+  width: 80%;
+}
+.detail main .detail-con .illness_info .title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.detail main .detail-con .illness_info small {
+  color: #55acee;
+}
+.detail main .detail-con .illness_info .view {
+  color: rgba(61, 68, 97, 0.7176470588);
+  margin-bottom: 30px;
+}
+.detail main .detail-con .illness_info .view span {
+  margin-right: 20px;
+  padding: 0;
+}
+.detail main .detail-con .illness_info .static_illness {
+  font-size: 20px;
+}
+.detail main .detail-con .illness_info .des {
+  height: auto;
+}
+.detail main .detail-con .illness_info .des .des-con {
+  display: flex;
+  gap: 2rem;
+}
+.detail main .detail-con .illness_info .des .des-con .left {
+  width: 65%;
+}
+.detail main .detail-con .illness_info .des .des-con .left .name {
+  background-color: #3d4461;
+  color: #fff;
+  width: max-content;
+  padding: 15px 20px;
+  margin: 25px 0 25px 30%;
+}
+.detail main .detail-con .illness_info .des .des-con .left .line {
+  font-size: 20px;
+  line-height: 15px;
+  padding: 0 25px;
+}
+@media screen and (max-width: 992px) {
+  .detail main .detail-con .illness_info .des .des-con .left .line {
+    line-height: 25px;
+  }
+}
+.detail main .detail-con .illness_info .des .des-con .right {
+  width: auto;
+  height: auto;
+}
+.detail main .detail-con .illness_info .des .des-con .right img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px outset #FF5851;
+}
+@media screen and (max-width: 992px) {
+  .detail main .detail-con .illness_info .des .des-con .right {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  .detail main .detail-con .illness_info .des .des-con {
+    flex-direction: column;
+  }
+  .detail main .detail-con .illness_info .des .des-con .left, .detail main .detail-con .illness_info .des .des-con .right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 728px) {
+  .detail main .detail-con .illness_info {
+    width: 90%;
+  }
+}
+.detail main .map {
+  margin-top: 35px;
+}
+.detail .concluding {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #3D4461;
+  color: #fff;
+}

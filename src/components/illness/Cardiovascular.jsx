@@ -9,6 +9,8 @@ import Map_cate from "../sub_components/Map_cate";
 import Footer from "../sub_components/Footer";
 import Loading from "../sub_components/Loading";
 import lung from "../../assets/image/Cardiovascular_disease_3.png"
+import Aos from "aos";
+
 
 const Cardiovascular = () => {
   const [query, setquery] = useState("");
@@ -46,10 +48,6 @@ const Cardiovascular = () => {
   const handleItemClick = (id) => {
     navigate(`/Single_illness/${id}`);
   };
-  useEffect(() => {
-    handleSearch();
-    // Aos.init();
-  }, [query]);
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array];
@@ -78,7 +76,9 @@ const Cardiovascular = () => {
       }
     };
     relateIllness();
-  }, []);
+    handleSearch();
+    Aos.init();
+  }, [query]);
 
   const handleRelateIllness = (id) => {
     navigate(`/Single_illness/${id}`);
@@ -181,7 +181,8 @@ const Cardiovascular = () => {
                 </div>
                 <div className="content">
                   <div className="c-left">
-                    <div className="overview">
+                    <div className="overview" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Overview</h1>
                       <div className="con-overview">
                         <h2 className="h2">What is cardiovascular disease?</h2>
@@ -216,14 +217,15 @@ const Cardiovascular = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="symptoms">
+                    <div className="symptoms" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Symptoms and Causes</h1>
                       <div className="con-overview">
                         <h2 className="h2">
                         What causes cardiovascular disease?
                         </h2>
                         <p className="spp-des">
-                        The causes of cardiovascular disease can vary depending on the specific type. For example, <a href="" className="link-list">atherosclerosis</a> (plaque buildup in your arteries) causes coronary artery disease and peripheral artery disease. Coronary artery disease, scarring of your heart muscle, genetic problems or medications can cause arrhythmias. Aging, infections and rheumatic disease can cause valve diseases.                        </p>
+                        The causes of cardiovascular disease can vary depending on the specific type. For example, <a href="javascript(0)" className="link-list">atherosclerosis</a> (plaque buildup in your arteries) causes coronary artery disease and peripheral artery disease. Coronary artery disease, scarring of your heart muscle, genetic problems or medications can cause arrhythmias. Aging, infections and rheumatic disease can cause valve diseases.                        </p>
                         <h3 className="h3">What are cardiovascular disease risk factors?</h3>
                         <p className="spp-des">You may be more likely to develop cardiovascular disease if you have risk factors such as:</p>
                         <ul className="list">
@@ -237,7 +239,7 @@ const Cardiovascular = () => {
                           <li className="l-cover">Diet high in sodium, sugar and fat.</li>
                           <li className="l-cover">Overuse of alcohol.</li>
                           <li className="l-cover">Misuse of prescription or recreational drugs.</li>
-                          <li className="l-cover"><a href="" className="link-list">Preeclampsia</a> or toxemia.</li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Preeclampsia</a> or toxemia.</li>
                           <li className="l-cover">Gestational diabetes.</li>
                           <li className="l-cover">Chronic inflammatory or autoimmune conditions.</li>
                         </ul>
@@ -312,7 +314,8 @@ const Cardiovascular = () => {
                         
                       </div>
                     </div>
-                    <div className="diagnosis">
+                    <div className="diagnosis" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Diagnosis and Tests</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -368,7 +371,8 @@ const Cardiovascular = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="management">
+                    <div className="management" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Management and Treatment</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -395,7 +399,8 @@ const Cardiovascular = () => {
                         </ul>
                       </div>
                     </div>
-                    <div className="Outlook">
+                    <div className="Outlook" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Outlook / Prognosis</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -413,15 +418,16 @@ const Cardiovascular = () => {
                         <br/><br/>If you have cardiovascular disease, you may have a higher risk of:
                         </p>
                         <ul className="list">
-                          <li className="l-cover"><a href="" className="link-list">Heart attack.</a></li>
-                          <li className="l-cover"><a href="" className="link-list">Stroke.</a></li>
-                          <li className="l-cover"><a href="" className="link-list">Acute limb ischemia</a> (sudden blockage in your leg arteries).</li>
-                          <li className="l-cover"><a href="" className="link-list">Aortic dissection.</a></li>
-                          <li className="l-cover"><a href="" className="link-list">Sudden cardiac death.</a></li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Heart attack.</a></li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Stroke.</a></li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Acute limb ischemia</a> (sudden blockage in your leg arteries).</li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Aortic dissection.</a></li>
+                          <li className="l-cover"><a href="javascript(0)" className="link-list">Sudden cardiac death.</a></li>
                         </ul>
                       </div>
                     </div>
-                    <div className="question">
+                    <div className="question" data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom">
                       <h1 className="h1">Living With</h1>
                       <div className="con-overview">
                         <h2 className="h2">
@@ -456,7 +462,7 @@ const Cardiovascular = () => {
                   <div className="c-right">
                     <h1 className="h1">Relate illness</h1>
                     {illness.map((item, index) => (
-                      <div className="box-relate" key={index}>
+                      <div className="box-relate" key={index} data-aos="zoom-in">
                         <div className="img">
                           <img src={item.img} alt="" />
                           <span className="new">new</span>

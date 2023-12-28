@@ -135,11 +135,11 @@ const Header = () => {
                   <Link className="nav-hover" to={"/About"}>About Us</Link>
                 </li>
               </ul>
-              <button type="button"  className="login" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+              <button type="button"  className="login" data-bs-toggle="modal" data-bs-target="#login">Sign Up</button>
             </div>
             <div className="con2-nav-mobile">
               <div className="res-nav">
-                <button className="btn" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                <button className="btn" data-bs-toggle="modal" data-bs-target="#login">Sign Up</button>
                 <div className="mobile-icon">
                   <FontAwesomeIcon onClick={toggleSidebar} icon={faBars} />
                 </div>
@@ -192,7 +192,7 @@ const Header = () => {
         <div className="modal-dialog">
           <div className="modal-content login">
             <p className="title">
-              <h3>Login</h3>
+              <h3>Sign Up</h3>
               <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </p>
             <form action="" className="card_form" method="GET">

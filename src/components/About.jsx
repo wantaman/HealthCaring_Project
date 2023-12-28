@@ -48,10 +48,9 @@ const About = () => {
 
   useEffect(() => {
     handleSearch();
-  }, [query]);
-  useEffect(()=>{
     Aos.init();
-  })
+  }, [query]);
+  
   return (
     <div className="about">
       {/* Header */}

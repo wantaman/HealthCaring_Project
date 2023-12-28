@@ -110,7 +110,7 @@ const Rating_hos = () => {
                 </h2>
               </div>
               <div className="left-des">
-                <div className="des">
+                <div className="des" style={{fontStyle:"italic"}}>
                 At Our Hospital, your health is our priority, and we are honored to be a part of your healthcare journey. Trust us to provide not just medical expertise, but also compassion, respect, and the highest standards of care. Discover the difference at Our Hospital, where your well-being is our mission.
                 </div>
                 <button className="btn">
@@ -208,7 +208,7 @@ const Rating_hos = () => {
                 </h2>
               </div>
               <div className="left-des">
-                <div className="des">
+                <div className="des" style={{fontStyle:"italic"}}>
                   Ambulances are not just vehicles; they represent a critical
                   link in the chain of emergency medical services, providing
                   timely and specialized care that can make a significant
@@ -259,9 +259,9 @@ const Rating_hos = () => {
                         <FontAwesomeIcon color="#FF5851" icon={faMap} />{" "}
                         {index.location}
                       </p>
-                      <button className="btn">
+                      {/* <button className="btn">
                         <Link>Call Now!</Link>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 ))}

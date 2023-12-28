@@ -147,6 +147,7 @@ $old-orange: #FF5851;
                     height:320px;
                     min-height: 310px;
                     position: relative;
+                    overflow: hidden;
                     img{
                         width: 100%;
                         height: 100%;
@@ -156,8 +157,8 @@ $old-orange: #FF5851;
                     .icon{
                         position: absolute;
                         top: 0;
-                        left: 0%;
-                        width: 30px;
+                        left: -1%;
+                        width: 50px;
                         background-color: $old-orange;
                         color: #000;
                         text-align: center;
