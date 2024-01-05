@@ -1,0 +1,86 @@
+.loader {
+    position: relative;
+    width: 240px;
+    height: 140px;
+    margin-bottom: 10px;
+    border: 1px solid #d3d3d3;
+    padding: 15px;
+    background-color: #e3e3e33b;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+            110deg,
+            rgba(227, 227, 227, 0) 0%,
+            rgba(227, 227, 227, 0) 40%,
+            rgba(227, 227, 227, 0.808) 50%,
+            rgba(227, 227, 227, 0) 60%,
+            rgba(227, 227, 227, 0) 100%
+        );
+        animation: gradient-animation_2 1.2s linear infinite;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        > div {
+            background-color: #cacacab4;
+        }
+    }
+
+    .circle {
+        width:100%;
+        height: 50px;
+        // margin: 0 auto;
+    }
+
+    .button {
+        display: inline-block;
+        height: 32px;
+        width: 75px;
+    }
+
+    .line-1 {
+        margin: 5px 0;
+        height: 10px;
+        width: 30%;
+    }
+
+    .line-2 {
+
+        margin: 5px 0;
+        height: 10px;
+        width: 100%;
+    }
+
+    .line-3 {
+        margin: 5px 0;
+        height: 10px;
+        width:100%;
+    }
+
+    .line-4 {
+
+        margin: 5px 0;
+        height: 10px;
+        width: 100%;
+    }
+
+    @keyframes gradient-animation_2 {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
+    }
+}

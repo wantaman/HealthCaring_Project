@@ -13,7 +13,7 @@ import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
-import Loading from "../sub_components/Loading"
+import ProBlur from "../hospital/ProBlur";
 
 const CustomLeftArrow = ({ onClick, ...rest }) => {
   return (
@@ -88,6 +88,8 @@ const Rating_hos = () => {
         setAmbulance(res.data);
       } catch (error) {
         console.log(error);
+      }finally {
+        setLoading(false);
       }
     };
     getAmbulance();
@@ -97,7 +99,7 @@ const Rating_hos = () => {
     <section>
       {loading ? (
         <>
-          <Loading />
+          <ProBlur/>
         </>
       ) : (
         <>
